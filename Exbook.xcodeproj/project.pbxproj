@@ -13,6 +13,16 @@
 		73225E882885CDB90013078D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E762885CDB60013078D /* ContentView.swift */; };
 		73225E892885CDB90013078D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73225E772885CDB90013078D /* Assets.xcassets */; };
 		73225E8A2885CDB90013078D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73225E772885CDB90013078D /* Assets.xcassets */; };
+		73225E962885D5CF0013078D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E952885D5CF0013078D /* AppModel.swift */; };
+		73225E972885D5CF0013078D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E952885D5CF0013078D /* AppModel.swift */; };
+		73225E9D2885D8510013078D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E9C2885D8510013078D /* HomeView.swift */; };
+		73225E9E2885D8510013078D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E9C2885D8510013078D /* HomeView.swift */; };
+		73225EA02885DA940013078D /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E9F2885DA940013078D /* ListingView.swift */; };
+		73225EA12885DA940013078D /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E9F2885DA940013078D /* ListingView.swift */; };
+		73225EA32885DABD0013078D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA22885DABD0013078D /* AccountView.swift */; };
+		73225EA42885DABD0013078D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA22885DABD0013078D /* AccountView.swift */; };
+		73225EA72885DB940013078D /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA62885DB940013078D /* BasketView.swift */; };
+		73225EA82885DB940013078D /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA62885DB940013078D /* BasketView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,11 @@
 		73225E7C2885CDB90013078D /* Exbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73225E822885CDB90013078D /* Exbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73225E842885CDB90013078D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		73225E952885D5CF0013078D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		73225E9C2885D8510013078D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		73225E9F2885DA940013078D /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
+		73225EA22885DABD0013078D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		73225EA62885DB940013078D /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +69,9 @@
 		73225E742885CDB60013078D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				73225E982885D70C0013078D /* Views */,
+				73225E942885D5C00013078D /* Model */,
+				73225E932885D40D0013078D /* Core */,
 				73225E752885CDB60013078D /* ExbookApp.swift */,
 				73225E762885CDB60013078D /* ContentView.swift */,
 				73225E772885CDB90013078D /* Assets.xcassets */,
@@ -76,6 +94,64 @@
 				73225E842885CDB90013078D /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		73225E932885D40D0013078D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		73225E942885D5C00013078D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73225E952885D5CF0013078D /* AppModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73225E982885D70C0013078D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73225EA52885DB860013078D /* Basket */,
+				73225E9B2885D83E0013078D /* Account */,
+				73225E9A2885D82F0013078D /* Listing */,
+				73225E992885D8250013078D /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73225E992885D8250013078D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				73225E9C2885D8510013078D /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		73225E9A2885D82F0013078D /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				73225E9F2885DA940013078D /* ListingView.swift */,
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		73225E9B2885D83E0013078D /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				73225EA22885DABD0013078D /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		73225EA52885DB860013078D /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				73225EA62885DB940013078D /* BasketView.swift */,
+			);
+			path = Basket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73225EA32885DABD0013078D /* AccountView.swift in Sources */,
+				73225E962885D5CF0013078D /* AppModel.swift in Sources */,
+				73225EA02885DA940013078D /* ListingView.swift in Sources */,
+				73225E9D2885D8510013078D /* HomeView.swift in Sources */,
 				73225E872885CDB90013078D /* ContentView.swift in Sources */,
+				73225EA72885DB940013078D /* BasketView.swift in Sources */,
 				73225E852885CDB90013078D /* ExbookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,7 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73225EA42885DABD0013078D /* AccountView.swift in Sources */,
+				73225E972885D5CF0013078D /* AppModel.swift in Sources */,
+				73225EA12885DA940013078D /* ListingView.swift in Sources */,
+				73225E9E2885D8510013078D /* HomeView.swift in Sources */,
 				73225E882885CDB90013078D /* ContentView.swift in Sources */,
+				73225EA82885DB940013078D /* BasketView.swift in Sources */,
 				73225E862885CDB90013078D /* ExbookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
