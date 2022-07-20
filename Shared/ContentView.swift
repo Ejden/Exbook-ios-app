@@ -6,26 +6,23 @@
 //
 
 import SwiftUI
+import SwiftUIRouter
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    MainTabItem(name: "Home", icon: "house.fill")
-                }
-            ListingView()
-                .tabItem {
-                    MainTabItem(name: "Search", icon: "magnifyingglass")
-                }
-            BasketView()
-                .tabItem {
-                    MainTabItem(name: "Basket", icon: "cart.fill")
-                }
-            AccountView()
-                .tabItem {
-                    MainTabItem(name: "Account", icon: "person.fill")
-                }
+        Router(initialPath: "/") {
+            Route("/") {
+                HomeView()
+            }
+            Route("/listing") {
+                ListingView()
+            }
+            Route("/basket") {
+                BasketView()
+            }
+            Route("/account") {
+                AccountView()
+            }
         }
     }
 }

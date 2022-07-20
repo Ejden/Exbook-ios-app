@@ -6,15 +6,23 @@
 //
 
 import SwiftUI
+import SwiftUIRouter
 
 struct HomeView: View {
+    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    @EnvironmentObject var navigator: Navigator
+    
     var body: some View {
-        Text("Home View")
+        NavigableView {
+            VStack {
+                Text("Home View")
+            }
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: HomeViewModel.testInstance())
     }
 }

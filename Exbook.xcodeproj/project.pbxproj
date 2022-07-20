@@ -23,6 +23,20 @@
 		73225EA42885DABD0013078D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA22885DABD0013078D /* AccountView.swift */; };
 		73225EA72885DB940013078D /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA62885DB940013078D /* BasketView.swift */; };
 		73225EA82885DB940013078D /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA62885DB940013078D /* BasketView.swift */; };
+		73225EAA2885DE670013078D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA92885DE670013078D /* SearchBar.swift */; };
+		73225EAB2885DE670013078D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EA92885DE670013078D /* SearchBar.swift */; };
+		73225EAD2885DE800013078D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EAC2885DE800013078D /* HomeViewModel.swift */; };
+		73225EAE2885DE800013078D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225EAC2885DE800013078D /* HomeViewModel.swift */; };
+		73CB0818288862AB00058217 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 73CB0817288862AB00058217 /* SwiftUIRouter */; };
+		73CB081B2888631700058217 /* SwiftUIRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 73CB081A2888631700058217 /* SwiftUIRouter */; };
+		73CB081E28886AE800058217 /* NavigableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB081D28886AE800058217 /* NavigableView.swift */; };
+		73CB081F28886AE800058217 /* NavigableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB081D28886AE800058217 /* NavigableView.swift */; };
+		73CB08252888814500058217 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB08242888814500058217 /* Spacing.swift */; };
+		73CB08262888814500058217 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB08242888814500058217 /* Spacing.swift */; };
+		73CB0829288881C600058217 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB0828288881C600058217 /* Color.swift */; };
+		73CB082A288881C600058217 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB0828288881C600058217 /* Color.swift */; };
+		73CB082C288882BC00058217 /* StandardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB082B288882BC00058217 /* StandardUI.swift */; };
+		73CB082D288882BC00058217 /* StandardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB082B288882BC00058217 /* StandardUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +51,12 @@
 		73225E9F2885DA940013078D /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
 		73225EA22885DABD0013078D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		73225EA62885DB940013078D /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		73225EA92885DE670013078D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		73225EAC2885DE800013078D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		73CB081D28886AE800058217 /* NavigableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableView.swift; sourceTree = "<group>"; };
+		73CB08242888814500058217 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		73CB0828288881C600058217 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		73CB082B288882BC00058217 /* StandardUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CB0818288862AB00058217 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CB081B2888631700058217 /* SwiftUIRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +85,7 @@
 				73225E742885CDB60013078D /* Shared */,
 				73225E832885CDB90013078D /* macOS */,
 				73225E7D2885CDB90013078D /* Products */,
+				73CB08192888631700058217 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +122,7 @@
 		73225E932885D40D0013078D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				73CB0822288880DA00058217 /* StandardUI */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -114,6 +138,7 @@
 		73225E982885D70C0013078D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73CB081C28886A4700058217 /* Base */,
 				73225EA52885DB860013078D /* Basket */,
 				73225E9B2885D83E0013078D /* Account */,
 				73225E9A2885D82F0013078D /* Listing */,
@@ -126,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				73225E9C2885D8510013078D /* HomeView.swift */,
+				73225EA92885DE670013078D /* SearchBar.swift */,
+				73225EAC2885DE800013078D /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -154,6 +181,31 @@
 			path = Basket;
 			sourceTree = "<group>";
 		};
+		73CB08192888631700058217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73CB081C28886A4700058217 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				73CB081D28886AE800058217 /* NavigableView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		73CB0822288880DA00058217 /* StandardUI */ = {
+			isa = PBXGroup;
+			children = (
+				73CB08242888814500058217 /* Spacing.swift */,
+				73CB0828288881C600058217 /* Color.swift */,
+				73CB082B288882BC00058217 /* StandardUI.swift */,
+			);
+			path = StandardUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +222,9 @@
 			dependencies = (
 			);
 			name = "Exbook (iOS)";
+			packageProductDependencies = (
+				73CB0817288862AB00058217 /* SwiftUIRouter */,
+			);
 			productName = "Exbook (iOS)";
 			productReference = 73225E7C2885CDB90013078D /* Exbook.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +242,9 @@
 			dependencies = (
 			);
 			name = "Exbook (macOS)";
+			packageProductDependencies = (
+				73CB081A2888631700058217 /* SwiftUIRouter */,
+			);
 			productName = "Exbook (macOS)";
 			productReference = 73225E822885CDB90013078D /* Exbook.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +276,9 @@
 				Base,
 			);
 			mainGroup = 73225E6F2885CDB50013078D;
+			packageReferences = (
+				73CB0816288862AB00058217 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
+			);
 			productRefGroup = 73225E7D2885CDB90013078D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -253,11 +314,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				73225EA32885DABD0013078D /* AccountView.swift in Sources */,
+				73CB082C288882BC00058217 /* StandardUI.swift in Sources */,
+				73CB08252888814500058217 /* Spacing.swift in Sources */,
+				73225EAD2885DE800013078D /* HomeViewModel.swift in Sources */,
 				73225E962885D5CF0013078D /* AppModel.swift in Sources */,
 				73225EA02885DA940013078D /* ListingView.swift in Sources */,
+				73CB0829288881C600058217 /* Color.swift in Sources */,
 				73225E9D2885D8510013078D /* HomeView.swift in Sources */,
 				73225E872885CDB90013078D /* ContentView.swift in Sources */,
+				73225EAA2885DE670013078D /* SearchBar.swift in Sources */,
 				73225EA72885DB940013078D /* BasketView.swift in Sources */,
+				73CB081E28886AE800058217 /* NavigableView.swift in Sources */,
 				73225E852885CDB90013078D /* ExbookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,11 +334,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				73225EA42885DABD0013078D /* AccountView.swift in Sources */,
+				73CB082D288882BC00058217 /* StandardUI.swift in Sources */,
+				73CB08262888814500058217 /* Spacing.swift in Sources */,
+				73225EAE2885DE800013078D /* HomeViewModel.swift in Sources */,
 				73225E972885D5CF0013078D /* AppModel.swift in Sources */,
 				73225EA12885DA940013078D /* ListingView.swift in Sources */,
+				73CB082A288881C600058217 /* Color.swift in Sources */,
 				73225E9E2885D8510013078D /* HomeView.swift in Sources */,
 				73225E882885CDB90013078D /* ContentView.swift in Sources */,
+				73225EAB2885DE670013078D /* SearchBar.swift in Sources */,
 				73225EA82885DB940013078D /* BasketView.swift in Sources */,
+				73CB081F28886AE800058217 /* NavigableView.swift in Sources */,
 				73225E862885CDB90013078D /* ExbookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +402,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -381,6 +456,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -401,6 +478,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -431,6 +509,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -536,6 +615,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		73CB0816288862AB00058217 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/frzi/SwiftUIRouter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73CB0817288862AB00058217 /* SwiftUIRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73CB0816288862AB00058217 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
+			productName = SwiftUIRouter;
+		};
+		73CB081A2888631700058217 /* SwiftUIRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73CB0816288862AB00058217 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
+			productName = SwiftUIRouter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73225E702885CDB50013078D /* Project object */;
 }
