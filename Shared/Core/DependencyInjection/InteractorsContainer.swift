@@ -10,9 +10,14 @@ import Foundation
 extension DIContainer {
     class Interactors {
         let offerInteractor: OfferInteractor
+        let imagesInteractor: ImagesInteractor
         
-        init(offerInteractor: OfferInteractor) {
+        init(
+            offerInteractor: OfferInteractor,
+            imagesInteractor: ImagesInteractor
+        ) {
             self.offerInteractor = offerInteractor
+            self.imagesInteractor = imagesInteractor
         }
     }
 }

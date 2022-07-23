@@ -20,9 +20,9 @@ extension WebResourceProvider {
             let request = try endpoint.urlRequest(baseUrl: baseUrl)
             return session
                 .dataTaskPublisher(for: request)
-                .requestJSON(httpsCodes: httpsCodes)
+                .requestJSON(httpCodes: httpsCodes)
         } catch let error {
-            
+            return Fail<Value, Error>(error: error).eraseToAnyPublisher()
         }
     }
 }

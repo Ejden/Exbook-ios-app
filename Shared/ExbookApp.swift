@@ -9,17 +9,12 @@ import SwiftUI
 
 @main
 struct ExbookApp: App {
-    let dependencyInjectorContainer = DIContainer(
-        appState: AppState(),
-        interactors: DIContainer.Interactors(
-            offerInteractor: RealOfferInteractor()
-        )
-    )
+    let appEnvironment = AppEnvironment.create()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(dependencyInjectorContainer)
+                .environmentObject(appEnvironment.container)
         }
     }
 }

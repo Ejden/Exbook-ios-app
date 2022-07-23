@@ -77,7 +77,7 @@ extension Offer {
 
 extension Offer {
     struct Images {
-        let thumbnail: Image
-        let allImages: [Image]
+        let thumbnail: RawImage
+        let allImages: [RawImage]
     }
 }

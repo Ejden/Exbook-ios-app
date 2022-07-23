@@ -19,7 +19,8 @@ class DIContainer: ObservableObject {
     static var mock = DIContainer(
         appState: AppState(),
         interactors: Interactors(
-            offerInteractor: MockOfferInteractor()
+            offerInteractor: MockOfferInteractor(),
+            imagesInteractor: MockImagesInteractor()
         )
     )
 }

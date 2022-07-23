@@ -35,7 +35,10 @@ struct ListingView: View {
     @ViewBuilder var offersList: some View {
         VStack {
             List(offers) { offer in
-                Text(offer.book.title)
+                HStack {
+                    Text(offer.book.title)
+                    ListingOfferImage(rawImage: offer.images.thumbnail)
+                }
             }
             .listStyle(DefaultListStyle())
         }
@@ -43,8 +46,21 @@ struct ListingView: View {
 }
 
 private struct ListingOfferImage: View {
+    @EnvironmentObject var injected: DIContainer
+    var rawImage: RawImage
+    @State private var image: UIImage = UIImage.init()
+    
     var body: some View {
-        
+        HStack {
+            if let unwrappedImg = image {
+                Image(uiImage: unwrappedImg)
+            } else {
+                Text("Loading...")
+            }
+        }
+        .onAppear {
+            injected.interactors.imagesInteractor.load(bind: $image, image: rawImage)
+        }
     }
 }
 
