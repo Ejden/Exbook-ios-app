@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftUIRouter
 
 struct ContentView: View {
+    
     var body: some View {
         Router(initialPath: "/") {
             Route("/") {

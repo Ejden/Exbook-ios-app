@@ -8,9 +8,33 @@
 import SwiftUI
 
 struct ListingView: View {
+    @EnvironmentObject var container: DIContainer
+    @State var offers: [Offer] = []
+    
     var body: some View {
         NavigableView {
-            Text("Listing View")
+            VStack {
+                ListingSearchBar()
+                if offers.isEmpty {
+                    noOffers
+                } else {
+                    offersList
+                }
+            }
+        }.onAppear {
+            container.interactors.offerInteractor.fetchOffers($offers, page: 0)
+        }
+    }
+    
+    @ViewBuilder var noOffers: some View {
+        Text("Brak ofert")
+    }
+    
+    @ViewBuilder var offersList: some View {
+        VStack {
+            List(offers) { offer in
+                Text(offer.book.title)
+            }
         }
     }
 }
