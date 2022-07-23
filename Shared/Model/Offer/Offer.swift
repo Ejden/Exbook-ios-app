@@ -81,9 +81,3 @@ extension Offer {
         let allImages: [Image]
     }
 }
-
-extension Offer {
-    struct Image {
-        let url: String
-    }
-}

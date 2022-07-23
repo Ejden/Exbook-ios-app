@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import SwiftUIRouter
 
 struct ListingView: View {
-    @EnvironmentObject var container: DIContainer
+    @EnvironmentObject var injected: DIContainer
     @State var offers: [Offer] = []
     
     var body: some View {
@@ -21,8 +22,9 @@ struct ListingView: View {
                     offersList
                 }
             }
-        }.onAppear {
-            container.interactors.offerInteractor.fetchOffers($offers, page: 0)
+        }
+        .onAppear {
+            injected.interactors.offerInteractor.fetchOffers($offers, page: 0)
         }
     }
     
@@ -35,12 +37,21 @@ struct ListingView: View {
             List(offers) { offer in
                 Text(offer.book.title)
             }
+            .listStyle(DefaultListStyle())
         }
+    }
+}
+
+private struct ListingOfferImage: View {
+    var body: some View {
+        
     }
 }
 
 struct ListingView_Previews: PreviewProvider {
     static var previews: some View {
         ListingView()
+            .environmentObject(DIContainer.mock)
+            .environmentObject(Navigator.init(initialPath: "/listing"))
     }
 }
