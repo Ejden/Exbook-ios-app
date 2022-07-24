@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct RawImage {
+public struct RawImage {
     let url: URL
 }

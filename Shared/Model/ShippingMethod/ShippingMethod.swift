@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ShippingMethodId: Hashable {
+public struct ShippingMethodId: Hashable {
     let raw: String
 }

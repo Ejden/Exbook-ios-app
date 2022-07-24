@@ -24,6 +24,9 @@ struct ContentView: View {
             Route("/account") {
                 AccountView()
             }
+            Route("/offer") {
+                OfferView()
+            }
         }
     }
 }

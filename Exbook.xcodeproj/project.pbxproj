@@ -69,6 +69,14 @@
 		73FBADCD288C796800200490 /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADCB288C796800200490 /* NetworkingHelpers.swift */; };
 		73FBADCF288C7B9F00200490 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADCE288C7B9F00200490 /* AppEnvironment.swift */; };
 		73FBADD0288C7B9F00200490 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADCE288C7B9F00200490 /* AppEnvironment.swift */; };
+		73FBADD2288D50CA00200490 /* ListingOfferRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADD1288D50CA00200490 /* ListingOfferRow.swift */; };
+		73FBADD3288D50CA00200490 /* ListingOfferRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADD1288D50CA00200490 /* ListingOfferRow.swift */; };
+		73FBADD6288D550A00200490 /* OfferTypeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADD5288D550A00200490 /* OfferTypeBadge.swift */; };
+		73FBADD7288D550A00200490 /* OfferTypeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADD5288D550A00200490 /* OfferTypeBadge.swift */; };
+		73FBADD9288D5B1800200490 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADD8288D5B1800200490 /* Loadable.swift */; };
+		73FBADDA288D5B1800200490 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADD8288D5B1800200490 /* Loadable.swift */; };
+		73FBADDD288D760C00200490 /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADDC288D760C00200490 /* OfferView.swift */; };
+		73FBADDE288D760D00200490 /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADDC288D760C00200490 /* OfferView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +113,10 @@
 		73FBADC8288C4C0500200490 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		73FBADCB288C796800200490 /* NetworkingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelpers.swift; sourceTree = "<group>"; };
 		73FBADCE288C7B9F00200490 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		73FBADD1288D50CA00200490 /* ListingOfferRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingOfferRow.swift; sourceTree = "<group>"; };
+		73FBADD5288D550A00200490 /* OfferTypeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTypeBadge.swift; sourceTree = "<group>"; };
+		73FBADD8288D5B1800200490 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		73FBADDC288D760C00200490 /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +184,6 @@
 		73225E932885D40D0013078D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				73FBADBA288C47E900200490 /* Interactors */,
 				73FBADB0288C08D000200490 /* DependencyInjection */,
 				73CB0822288880DA00058217 /* StandardUI */,
 				73FBADCE288C7B9F00200490 /* AppEnvironment.swift */,
@@ -197,6 +208,8 @@
 		73225E982885D70C0013078D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73FBADDB288D75FF00200490 /* Offer */,
+				73FBADD4288D54DF00200490 /* BaseComponents */,
 				73CB081C28886A4700058217 /* Base */,
 				73225EA52885DB860013078D /* Basket */,
 				73225E9B2885D83E0013078D /* Account */,
@@ -221,6 +234,7 @@
 			children = (
 				73225E9F2885DA940013078D /* ListingView.swift */,
 				739B2DD4288ABF0E00EB6453 /* ListingSearchBar.swift */,
+				73FBADD1288D50CA00200490 /* ListingOfferRow.swift */,
 			);
 			path = Listing;
 			sourceTree = "<group>";
@@ -316,13 +330,6 @@
 			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
-		73FBADBA288C47E900200490 /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactors;
-			sourceTree = "<group>";
-		};
 		73FBADBB288C485200200490 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,8 +353,25 @@
 			children = (
 				73FBADC8288C4C0500200490 /* APICall.swift */,
 				73FBADCB288C796800200490 /* NetworkingHelpers.swift */,
+				73FBADD8288D5B1800200490 /* Loadable.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		73FBADD4288D54DF00200490 /* BaseComponents */ = {
+			isa = PBXGroup;
+			children = (
+				73FBADD5288D550A00200490 /* OfferTypeBadge.swift */,
+			);
+			path = BaseComponents;
+			sourceTree = "<group>";
+		};
+		73FBADDB288D75FF00200490 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				73FBADDC288D760C00200490 /* OfferView.swift */,
+			);
+			path = Offer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +485,7 @@
 				73FBADBD288C485C00200490 /* Image.swift in Sources */,
 				73FBADB2288C08E900200490 /* DIContainer.swift in Sources */,
 				73CB082C288882BC00058217 /* StandardUI.swift in Sources */,
+				73FBADD2288D50CA00200490 /* ListingOfferRow.swift in Sources */,
 				73CB08252888814500058217 /* Spacing.swift in Sources */,
 				73225EAD2885DE800013078D /* HomeViewModel.swift in Sources */,
 				739B2DC7288AB44D00EB6453 /* User.swift in Sources */,
@@ -469,11 +494,13 @@
 				739B2DCF288ABC6E00EB6453 /* Category.swift in Sources */,
 				73225E962885D5CF0013078D /* AppState.swift in Sources */,
 				73225EA02885DA940013078D /* ListingView.swift in Sources */,
+				73FBADD6288D550A00200490 /* OfferTypeBadge.swift in Sources */,
 				739B2DC3288AB24F00EB6453 /* Money.swift in Sources */,
 				739B2DD2288ABCD300EB6453 /* OfferInteractor.swift in Sources */,
 				73FBADCF288C7B9F00200490 /* AppEnvironment.swift in Sources */,
 				73CB0829288881C600058217 /* Color.swift in Sources */,
 				73FBADC0288C492E00200490 /* ImageProvider.swift in Sources */,
+				73FBADDD288D760C00200490 /* OfferView.swift in Sources */,
 				73225E9D2885D8510013078D /* HomeView.swift in Sources */,
 				739B2DCB288AB4C900EB6453 /* ShippingMethod.swift in Sources */,
 				739B2DBE288AB05F00EB6453 /* Offer.swift in Sources */,
@@ -484,6 +511,7 @@
 				73225EA72885DB940013078D /* BasketView.swift in Sources */,
 				739B2DD5288ABF0E00EB6453 /* ListingSearchBar.swift in Sources */,
 				73CB081E28886AE800058217 /* NavigableView.swift in Sources */,
+				73FBADD9288D5B1800200490 /* Loadable.swift in Sources */,
 				73225E852885CDB90013078D /* ExbookApp.swift in Sources */,
 				73FBADC9288C4C0500200490 /* APICall.swift in Sources */,
 			);
@@ -497,6 +525,7 @@
 				73FBADBE288C485C00200490 /* Image.swift in Sources */,
 				73FBADB3288C08E900200490 /* DIContainer.swift in Sources */,
 				73CB082D288882BC00058217 /* StandardUI.swift in Sources */,
+				73FBADD3288D50CA00200490 /* ListingOfferRow.swift in Sources */,
 				73CB08262888814500058217 /* Spacing.swift in Sources */,
 				73225EAE2885DE800013078D /* HomeViewModel.swift in Sources */,
 				739B2DC8288AB44D00EB6453 /* User.swift in Sources */,
@@ -505,11 +534,13 @@
 				739B2DD0288ABC6E00EB6453 /* Category.swift in Sources */,
 				73225E972885D5CF0013078D /* AppState.swift in Sources */,
 				73225EA12885DA940013078D /* ListingView.swift in Sources */,
+				73FBADD7288D550A00200490 /* OfferTypeBadge.swift in Sources */,
 				739B2DC4288AB24F00EB6453 /* Money.swift in Sources */,
 				739B2DD3288ABCD300EB6453 /* OfferInteractor.swift in Sources */,
 				73FBADD0288C7B9F00200490 /* AppEnvironment.swift in Sources */,
 				73CB082A288881C600058217 /* Color.swift in Sources */,
 				73FBADC1288C492E00200490 /* ImageProvider.swift in Sources */,
+				73FBADDE288D760D00200490 /* OfferView.swift in Sources */,
 				73225E9E2885D8510013078D /* HomeView.swift in Sources */,
 				739B2DCC288AB4C900EB6453 /* ShippingMethod.swift in Sources */,
 				739B2DBF288AB05F00EB6453 /* Offer.swift in Sources */,
@@ -520,6 +551,7 @@
 				73225EA82885DB940013078D /* BasketView.swift in Sources */,
 				739B2DD6288ABF0E00EB6453 /* ListingSearchBar.swift in Sources */,
 				73CB081F28886AE800058217 /* NavigableView.swift in Sources */,
+				73FBADDA288D5B1800200490 /* Loadable.swift in Sources */,
 				73225E862885CDB90013078D /* ExbookApp.swift in Sources */,
 				73FBADCA288C4C0500200490 /* APICall.swift in Sources */,
 			);

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Offer: Identifiable {
-    let id: OfferId
+public struct Offer: Identifiable {
+    public let id: OfferId
     let book: Book
     let images: Images
     let description: String?
@@ -21,15 +21,15 @@ struct Offer: Identifiable {
     let stockId: StockId
 }
 
-struct OfferId: Hashable {
+public struct OfferId: Hashable {
     let raw: String
 }
 
-struct StockId: Hashable {
+public struct StockId: Hashable {
     let raw: String
 }
 
-extension Offer {
+public extension Offer {
     enum OfferType {
         case exchange_and_buy
         case exchange_only
@@ -37,13 +37,13 @@ extension Offer {
     }
 }
 
-extension Offer {
+public extension Offer {
     struct Seller: Identifiable {
-        let id: UserId
+        public let id: UserId
     }
 }
 
-extension Offer {
+public extension Offer {
     struct Book {
         let author: String
         let title: String
@@ -52,14 +52,14 @@ extension Offer {
     }
 }
 
-extension Offer {
+public extension Offer {
     struct ShippingMethod: Identifiable {
-        let id: ShippingMethodId
+        public let id: ShippingMethodId
         let price: Money
     }
 }
 
-extension Offer {
+public extension Offer {
     enum BookCondition {
         case new
         case perfect
@@ -69,13 +69,13 @@ extension Offer {
     }
 }
 
-extension Offer {
+public extension Offer {
     struct Category {
         let id: CategoryId
     }
 }
 
-extension Offer {
+public extension Offer {
     struct Images {
         let thumbnail: RawImage
         let allImages: [RawImage]

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct CategoryId: Hashable {
+public struct CategoryId: Hashable {
     let raw: String
 }

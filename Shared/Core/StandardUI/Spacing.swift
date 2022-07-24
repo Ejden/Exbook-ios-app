@@ -10,6 +10,7 @@ import CoreGraphics
 
 extension StandardUI {
     struct Spacing {
+        public static let noSpacing: CGFloat = 0
         public static let extraSmall: CGFloat = 4
         public static let small: CGFloat = 8
         public static let regular: CGFloat = 16

@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol ImagesInteractor {
     func load(bind: Binding<UIImage>, image: RawImage)
+    func load(bind: Binding<Loadable<UIImage>>, image: RawImage)
 }
 
 class RealImagesInteractor: ImagesInteractor {
@@ -29,10 +30,26 @@ class RealImagesInteractor: ImagesInteractor {
                 bind.wrappedValue = result
             }
     }
+    
+    func load(bind: Binding<Loadable<UIImage>>, image: RawImage) {
+        imageProvider.fetchImage(url: image.url)
+            .sink { completion in
+                if let error = completion.error {
+                    bind.wrappedValue.setFailed(error: error)
+                }
+            } receiveValue: { value in
+                bind.wrappedValue.setLoaded(value: value)
+            }
+
+    }
 }
 
 class MockImagesInteractor: ImagesInteractor {
     func load(bind: Binding<UIImage>, image: RawImage) {
+        
+    }
+    
+    func load(bind: Binding<Loadable<UIImage>>, image: RawImage) {
         
     }
 }
