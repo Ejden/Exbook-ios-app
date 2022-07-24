@@ -209,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				73FBADDB288D75FF00200490 /* Offer */,
-				73FBADD4288D54DF00200490 /* BaseComponents */,
 				73CB081C28886A4700058217 /* Base */,
 				73225EA52885DB860013078D /* Basket */,
 				73225E9B2885D83E0013078D /* Account */,
@@ -306,6 +305,7 @@
 		73CB081C28886A4700058217 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				73FBADD5288D550A00200490 /* OfferTypeBadge.swift */,
 				73CB081D28886AE800058217 /* NavigableView.swift */,
 			);
 			path = Base;
@@ -356,14 +356,6 @@
 				73FBADD8288D5B1800200490 /* Loadable.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		73FBADD4288D54DF00200490 /* BaseComponents */ = {
-			isa = PBXGroup;
-			children = (
-				73FBADD5288D550A00200490 /* OfferTypeBadge.swift */,
-			);
-			path = BaseComponents;
 			sourceTree = "<group>";
 		};
 		73FBADDB288D75FF00200490 /* Offer */ = {

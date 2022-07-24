@@ -12,12 +12,17 @@ struct ListingView: View {
     @EnvironmentObject var injected: DIContainer
     @EnvironmentObject var navigator: Navigator
     @State var offers: [Offer] = []
+    @State var searchingPhrase: String = ""
     
     var body: some View {
         NavigableView {
             VStack {
-                ListingSearchBar()
-                if offers.isEmpty {
+                ListingSearchBar(searchingPhrase: $searchingPhrase)
+                    .padding(.leading, StandardUI.Spacing.small)
+                    .padding(.trailing, StandardUI.Spacing.small)
+                if searchingPhrase.isEmpty {
+                    searchView
+                } else if offers.isEmpty {
                     noOffers
                 } else {
                     offersList
@@ -27,6 +32,13 @@ struct ListingView: View {
         .onAppear {
             injected.interactors.offerInteractor.fetchOffers($offers, page: 0)
         }
+    }
+    
+    @ViewBuilder var searchView: some View {
+        Spacer()
+        Text("Brak historii wyszukań")
+            .foregroundColor(.gray)
+        Spacer()
     }
     
     @ViewBuilder var noOffers: some View {

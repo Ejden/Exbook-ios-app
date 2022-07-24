@@ -12,7 +12,7 @@ struct NavigableView<Content: View>: View {
     var content: () -> Content
     
     var body: some View {
-        VStack {
+        VStack(spacing: StandardUI.Spacing.noSpacing) {
             content()
             Spacer()
             CommonNavigationBar()
@@ -60,6 +60,7 @@ struct CommonNavigationBar: View {
             Spacer()
         }
         .padding(.top, StandardUI.Spacing.small)
+        .background(.ultraThickMaterial)
     }
 }
 
@@ -93,13 +94,31 @@ private extension Navigator {
 struct NavigableView_Previews: PreviewProvider {
     static var previews: some View {
         NavigableView() {
-            Text("Hello")
+            List(
+                [
+                    MockOfferInteractor.sampleOffer1,
+                    MockOfferInteractor.sampleOffer1,
+                    MockOfferInteractor.sampleOffer1,
+                    MockOfferInteractor.sampleOffer1,
+                    MockOfferInteractor.sampleOffer1,
+                    MockOfferInteractor.sampleOffer1,
+                    MockOfferInteractor.sampleOffer1,
+                ]
+            ) { offer in
+                ListingOfferRow(offer: offer)
+            }
         }
         .previewDisplayName("Light mode")
+        .environmentObject(Navigator.init(initialPath: "/"))
+        .environmentObject(DIContainer.mock)
+        .previewInterfaceOrientation(.portrait)
+        
         NavigableView() {
             Text("Hello")
         }
         .previewDisplayName("Dark mode")
         .preferredColorScheme(.dark)
+        .environmentObject(Navigator.init(initialPath: "/"))
+        .environmentObject(DIContainer.mock)
     }
 }
