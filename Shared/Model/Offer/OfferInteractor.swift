@@ -11,6 +11,7 @@ import SwiftUI
 protocol OfferInteractor {
     func fetchOffer(_ bind: Binding<Offer>, id: OfferId)
     func fetchOffers(_ bind: Binding<Array<Offer>>, page: Int)
+    func fetchRecommendations(_ bind: Binding<Loadable<Array<Offer>>>)
 }
 
 class RealOfferInteractor: OfferInteractor {
@@ -47,6 +48,11 @@ class RealOfferInteractor: OfferInteractor {
         
         return offers
     }
+    
+    func fetchRecommendations(_ bind: Binding<Loadable<Array<Offer>>>) {
+        bind.wrappedValue = .loaded(generateOffers())
+    }
+
 }
 
 public class MockOfferInteractor: OfferInteractor {
@@ -57,6 +63,11 @@ public class MockOfferInteractor: OfferInteractor {
     func fetchOffers(_ bind: Binding<Array<Offer>>, page: Int) {
         bind.wrappedValue = [MockOfferInteractor.sampleOffer1, MockOfferInteractor.sampleOffer2]
     }
+    
+    func fetchRecommendations(_ bind: Binding<Loadable<Array<Offer>>>) {
+        bind.wrappedValue = .loaded([MockOfferInteractor.sampleOffer1, MockOfferInteractor.sampleOffer2])
+    }
+
     
     public static let sampleOffer1 = Offer(
         id: OfferId(raw: "offer-id-1"),

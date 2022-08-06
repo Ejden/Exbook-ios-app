@@ -24,7 +24,7 @@ struct ListingOfferRow: View {
                     .font(.callout)
                 badges
                 HStack {
-                    OfferPrice(price: offer.price)
+                    PriceSnippet(offer.price)
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(.trailing)
@@ -75,21 +75,6 @@ private struct ListingOfferImage: View {
     var placeholder: some View = Image(systemName: "photo")
         .resizable()
         .frame(width: 120, height: 80, alignment: .leading)
-}
-
-private struct OfferPrice: View {
-    let price: Money?
-    
-    var body: some View {
-        if let price = price {
-            HStack(spacing: StandardUI.Spacing.extraSmall) {
-                Text("\(price.amount.formatted())")
-                Text("zł")
-            }
-        } else {
-            Text("Darmowe")
-        }
-    }
 }
 
 struct ListingOfferRow_Preview: PreviewProvider {
