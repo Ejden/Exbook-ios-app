@@ -16,6 +16,7 @@ struct RecommendedOffers: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Rekomendowane oferty")
+                .font(.title2)
             switch offers {
             case .loading: ProgressView()
             case .failed: Text("Error")
@@ -34,7 +35,7 @@ struct RecommendedOffers: View {
                 ForEach(loadedOffers) { offer in
                     RecommendedOffer(offer: offer)
                         .onTapGesture {
-                            navigator.navigate(.offer)
+                            navigator.navigate(.offer(offer.id))
                         }
                 }
             }

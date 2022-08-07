@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUIRouter
 
-struct NavigableView<Content: View>: View {
+struct MainView<Content: View>: View {
     var content: () -> Content
     
     var body: some View {
@@ -91,9 +91,9 @@ private extension Navigator {
     }
 }
 
-struct NavigableView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigableView() {
+        MainView() {
             List(
                 [
                     MockOfferInteractor.sampleOffer1,
@@ -113,7 +113,7 @@ struct NavigableView_Previews: PreviewProvider {
         .environmentObject(DIContainer.mock)
         .previewInterfaceOrientation(.portrait)
         
-        NavigableView() {
+        MainView() {
             Text("Hello")
         }
         .previewDisplayName("Dark mode")

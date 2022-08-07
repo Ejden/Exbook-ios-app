@@ -9,6 +9,6 @@ import SwiftUIRouter
 
 extension Navigator {
     func navigate(_ path: Path) {
-        navigate(path.rawValue)
+        navigate(path.raw)
     }
 }

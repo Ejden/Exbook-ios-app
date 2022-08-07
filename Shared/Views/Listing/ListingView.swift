@@ -15,7 +15,7 @@ struct ListingView: View {
     @State var searchingPhrase: String = ""
     
     var body: some View {
-        NavigableView {
+        MainView {
             VStack {
                 ListingSearchBar(searchingPhrase: $searchingPhrase)
                     .padding(.leading, StandardUI.Spacing.small)

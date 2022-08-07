@@ -12,7 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var navigator: Navigator
     
     var body: some View {
-        NavigableView {
+        MainView {
             ScrollView {
                 VStack {
                     SearchBarButton()
@@ -21,6 +21,8 @@ struct HomeView: View {
                             navigator.navigate(.listing)
                         }
                     RecommendedOffers()
+                    CategoryList()
+                        .padding()
                 }
             }
         }

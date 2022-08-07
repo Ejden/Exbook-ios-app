@@ -14,16 +14,11 @@ struct AppEnvironment {
 extension AppEnvironment {
     static func create() -> AppEnvironment {
         let urlSession = configureSession()
-        
+        let interactors = configureInteractors(imageProvider: RealImageProvider(session: urlSession, baseUrl: ""))
         
         let container = DIContainer(
             appState: AppState(),
-            interactors: DIContainer.Interactors(
-                offerInteractor: RealOfferInteractor(),
-                imagesInteractor: RealImagesInteractor(
-                    imageProvider: RealImageProvider(session: urlSession, baseUrl: "")
-                )
-            )
+            interactors: interactors
         )
         
         return AppEnvironment(container: container)
@@ -38,5 +33,15 @@ extension AppEnvironment {
         configuration.requestCachePolicy = .returnCacheDataElseLoad
         configuration.urlCache = .shared
         return URLSession(configuration: configuration)
+    }
+    
+    private static func configureInteractors(
+        imageProvider: ImageProvider
+    ) -> DIContainer.Interactors {
+        return DIContainer.Interactors(
+            offerInteractor: RealOfferInteractor(),
+            imagesInteractor: RealImagesInteractor(imageProvider: imageProvider),
+            categoryInteractor: RealCategoryInteractor()
+        )
     }
 }

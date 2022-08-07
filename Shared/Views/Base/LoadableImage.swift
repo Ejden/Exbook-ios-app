@@ -5,13 +5,16 @@
 //  Created by Adrian Stypinski on 06/08/2022.
 //
 
+import OSLog
 import SwiftUI
+
+private let logger = Logger()
 
 struct LoadableImage: View {
     let rawImage: RawImage
     let placeholder: PlaceholderStyle
-    let width: CGFloat
-    let height: CGFloat
+    let width: CGFloat?
+    let height: CGFloat?
     let maxWidth: CGFloat?
     let maxHeight: CGFloat?
     
@@ -28,6 +31,15 @@ struct LoadableImage: View {
         self.maxHeight = width
     }
     
+    init(image: RawImage, placeholder: PlaceholderStyle = .image, maxWidth: CGFloat?, maxHeight: CGFloat?) {
+        self.rawImage = image
+        self.placeholder = placeholder
+        self.width = nil
+        self.height = nil
+        self.maxWidth = maxWidth
+        self.maxHeight = maxHeight
+    }
+    
     var body: some View {
         Group {
             switch image {
@@ -37,15 +49,25 @@ struct LoadableImage: View {
             }
         }
         .onAppear {
+            logger.debug("Loading img with path: \(rawImage.url.path)")
             container.interactors.imagesInteractor.load(bind: $image, image: self.rawImage)
         }
     }
     
     func renderImage(_ uiImage: UIImage) -> some View {
-        Image(uiImage: uiImage)
-            .resizable()
-            .frame(width: self.width, height: self.height, alignment: .leading)
-            .cornerRadius(self.cornerRadius)
+        Group {
+            if let width = width {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(width: width, height: self.height, alignment: .leading)
+                    .cornerRadius(self.cornerRadius)
+            } else {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(maxWidth: self.maxWidth, maxHeight: self.maxHeight, alignment: .leading)
+                    .cornerRadius(self.cornerRadius)
+            }
+        }
     }
     
     func renderPlaceholder() -> some View {

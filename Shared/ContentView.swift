@@ -24,23 +24,22 @@ struct ContentView: View {
             Route("/account") {
                 AccountView()
             }
-            Route("/offer") {
-                OfferView()
+            Route("/offer/:offerId", validator: validateOfferId) { offerId in
+                OfferView(offerId: offerId)
             }
         }
     }
 }
 
-struct MainTabItem: View {
-    let name: String
-    let icon: String
-    
-    var body: some View {
-        VStack {
-            Image(systemName: icon)
-            Text(name)
-        }
+private func validateOfferId(routeInfo: RouteInformation) -> OfferId {
+    guard let rawOfferId = routeInfo.parameters["offerId"] else {
+        return OfferId(raw: "")
     }
+    return OfferId(raw: rawOfferId)
+}
+
+enum RoutingError: Error {
+    case invalidParameter
 }
 
 struct ContentView_Previews: PreviewProvider {

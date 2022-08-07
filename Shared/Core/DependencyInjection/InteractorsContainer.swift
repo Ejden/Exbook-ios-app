@@ -11,13 +11,16 @@ extension DIContainer {
     class Interactors {
         let offerInteractor: OfferInteractor
         let imagesInteractor: ImagesInteractor
+        let categoryInteractor: CategoryInteractor
         
         init(
             offerInteractor: OfferInteractor,
-            imagesInteractor: ImagesInteractor
+            imagesInteractor: ImagesInteractor,
+            categoryInteractor: CategoryInteractor
         ) {
             self.offerInteractor = offerInteractor
             self.imagesInteractor = imagesInteractor
+            self.categoryInteractor = categoryInteractor
         }
     }
 }

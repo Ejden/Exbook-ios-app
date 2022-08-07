@@ -20,7 +20,8 @@ class DIContainer: ObservableObject {
         appState: AppState(),
         interactors: Interactors(
             offerInteractor: MockOfferInteractor(),
-            imagesInteractor: MockImagesInteractor()
+            imagesInteractor: MockImagesInteractor(),
+            categoryInteractor: MockCategoryInteractor()
         )
     )
 }

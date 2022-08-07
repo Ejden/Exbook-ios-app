@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
+
+typealias LoadableBind<T> = Binding<Loadable<T>>
 
 enum Loadable<T> {
     case loading
