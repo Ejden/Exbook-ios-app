@@ -10,7 +10,7 @@ import SwiftUI
 struct OfferDetails: View {
     let offer: DetailedOffer
     
-    @State private var quantity: String = ""
+    @State private var quantity: String = "1"
         
     var body: some View {
         VStack(alignment: .leading) {
@@ -86,8 +86,26 @@ struct OfferDetails: View {
     
     private func buyActions() -> some View {
         VStack(alignment: .leading) {
-            TextField("", text: $quantity)
-                .keyboardType(.decimalPad)
+            HStack {
+                TextField("", text: $quantity)
+                    .keyboardType(.decimalPad)
+                    .lineLimit(1)
+                    .accessibilityLabel("Sztuk")
+                    .frame(width: 60, height: 30, alignment: .leading)
+                    .border(StandardUI.Color.gray)
+                    .padding(.trailing, StandardUI.Spacing.regular)
+                Text("z \(offer.inStock)")
+            }
+            if offer.canBeBought {
+                StandardButton(type: .primary, text: "Kup") {
+                    
+                }
+            }
+            if offer.canBeExchanged {
+                StandardButton(type: .primary, text: "Wymień") {
+                    
+                }
+            }
         }
     }
 }

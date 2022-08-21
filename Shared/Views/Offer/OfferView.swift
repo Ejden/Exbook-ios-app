@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIRouter
 
 struct OfferView: View {
     var offerId: OfferId
@@ -43,6 +44,16 @@ struct OfferView: View {
             VStack {
                 OfferDetails(offer: loadedOffer)
                     .padding()
+                    .background(StandardUI.Color.darkGray)
+                OfferDescription(offer: loadedOffer)
+                    .padding()
+                    .background(StandardUI.Color.darkGray)
+                OfferOtherRecommendations()
+                    .padding()
+                    .background(StandardUI.Color.darkGray)
+                OfferDeliveryOptions(offer: loadedOffer)
+                    .padding()
+                    .background(StandardUI.Color.darkGray)
             }
         }
     }
@@ -51,5 +62,7 @@ struct OfferView: View {
 struct OfferView_Previews: PreviewProvider {
     static var previews: some View {
         OfferView(offerId: MockOfferInteractor.sampleOffer1.id)
+            .environmentObject(DIContainer.mock)
+            .environmentObject(Navigator.init())
     }
 }

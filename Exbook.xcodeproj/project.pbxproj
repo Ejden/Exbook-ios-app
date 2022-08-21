@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731D9E3228B2579C00C847D6 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D9E3128B2579C00C847D6 /* StandardButton.swift */; };
+		731D9E3328B2579C00C847D6 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D9E3128B2579C00C847D6 /* StandardButton.swift */; };
+		731D9E3528B25C2000C847D6 /* OfferDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D9E3428B25C2000C847D6 /* OfferDescription.swift */; };
+		731D9E3628B25C2000C847D6 /* OfferDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D9E3428B25C2000C847D6 /* OfferDescription.swift */; };
+		731D9E3828B25C4A00C847D6 /* OfferOtherRecommendations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D9E3728B25C4A00C847D6 /* OfferOtherRecommendations.swift */; };
+		731D9E3928B25C4A00C847D6 /* OfferOtherRecommendations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D9E3728B25C4A00C847D6 /* OfferOtherRecommendations.swift */; };
+		731D9E3B28B25C6100C847D6 /* OfferDeliveryOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D9E3A28B25C6100C847D6 /* OfferDeliveryOptions.swift */; };
+		731D9E3C28B25C6100C847D6 /* OfferDeliveryOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D9E3A28B25C6100C847D6 /* OfferDeliveryOptions.swift */; };
+		731D9E3F28B25EEC00C847D6 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 731D9E3E28B25EEC00C847D6 /* ExpandableText */; };
 		73225E852885CDB90013078D /* ExbookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E752885CDB60013078D /* ExbookApp.swift */; };
 		73225E862885CDB90013078D /* ExbookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E752885CDB60013078D /* ExbookApp.swift */; };
 		73225E872885CDB90013078D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73225E762885CDB60013078D /* ContentView.swift */; };
@@ -102,6 +111,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		731D9E3128B2579C00C847D6 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
+		731D9E3428B25C2000C847D6 /* OfferDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDescription.swift; sourceTree = "<group>"; };
+		731D9E3728B25C4A00C847D6 /* OfferOtherRecommendations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferOtherRecommendations.swift; sourceTree = "<group>"; };
+		731D9E3A28B25C6100C847D6 /* OfferDeliveryOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDeliveryOptions.swift; sourceTree = "<group>"; };
 		73225E752885CDB60013078D /* ExbookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExbookApp.swift; sourceTree = "<group>"; };
 		73225E762885CDB60013078D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73225E772885CDB90013078D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CB0818288862AB00058217 /* SwiftUIRouter in Frameworks */,
+				731D9E3F28B25EEC00C847D6 /* ExpandableText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +363,7 @@
 				734576AF289E9C2400828D52 /* PriceSnippet.swift */,
 				734576B2289EBB8200828D52 /* LoadableImage.swift */,
 				7390E22828A00B6F00348E35 /* StarsCounter.swift */,
+				731D9E3128B2579C00C847D6 /* StandardButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -406,6 +421,9 @@
 			children = (
 				73FBADDC288D760C00200490 /* OfferView.swift */,
 				734576BB289FFBA200828D52 /* OfferDetails.swift */,
+				731D9E3428B25C2000C847D6 /* OfferDescription.swift */,
+				731D9E3728B25C4A00C847D6 /* OfferOtherRecommendations.swift */,
+				731D9E3A28B25C6100C847D6 /* OfferDeliveryOptions.swift */,
 			);
 			path = Offer;
 			sourceTree = "<group>";
@@ -428,6 +446,7 @@
 			name = "Exbook (iOS)";
 			packageProductDependencies = (
 				73CB0817288862AB00058217 /* SwiftUIRouter */,
+				731D9E3E28B25EEC00C847D6 /* ExpandableText */,
 			);
 			productName = "Exbook (iOS)";
 			productReference = 73225E7C2885CDB90013078D /* Exbook.app */;
@@ -482,6 +501,7 @@
 			mainGroup = 73225E6F2885CDB50013078D;
 			packageReferences = (
 				73CB0816288862AB00058217 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
+				731D9E3D28B25EEC00C847D6 /* XCRemoteSwiftPackageReference "ExpandableText" */,
 			);
 			productRefGroup = 73225E7D2885CDB90013078D /* Products */;
 			projectDirPath = "";
@@ -518,11 +538,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				73225EA32885DABD0013078D /* AccountView.swift in Sources */,
+				731D9E3528B25C2000C847D6 /* OfferDescription.swift in Sources */,
 				734B9BEE2899A8B300684C2F /* Path.swift in Sources */,
 				734576B0289E9C2400828D52 /* PriceSnippet.swift in Sources */,
 				73FBADBD288C485C00200490 /* Image.swift in Sources */,
 				73FBADB2288C08E900200490 /* DIContainer.swift in Sources */,
 				73CB082C288882BC00058217 /* StandardUI.swift in Sources */,
+				731D9E3B28B25C6100C847D6 /* OfferDeliveryOptions.swift in Sources */,
 				734576AD289E9B3C00828D52 /* OfferTypeBadges.swift in Sources */,
 				734576B9289FD3F100828D52 /* CategoryInteractor.swift in Sources */,
 				734576B6289FD28400828D52 /* CategoryList.swift in Sources */,
@@ -537,6 +559,7 @@
 				739B2DCF288ABC6E00EB6453 /* Category.swift in Sources */,
 				73225E962885D5CF0013078D /* AppState.swift in Sources */,
 				73225EA02885DA940013078D /* ListingView.swift in Sources */,
+				731D9E3228B2579C00C847D6 /* StandardButton.swift in Sources */,
 				73FBADD6288D550A00200490 /* OfferTypeBadge.swift in Sources */,
 				739B2DC3288AB24F00EB6453 /* Money.swift in Sources */,
 				739B2DD2288ABCD300EB6453 /* OfferInteractor.swift in Sources */,
@@ -549,6 +572,7 @@
 				73FBADDD288D760C00200490 /* OfferView.swift in Sources */,
 				73225E9D2885D8510013078D /* HomeView.swift in Sources */,
 				739B2DCB288AB4C900EB6453 /* ShippingMethod.swift in Sources */,
+				731D9E3828B25C4A00C847D6 /* OfferOtherRecommendations.swift in Sources */,
 				739B2DBE288AB05F00EB6453 /* Offer.swift in Sources */,
 				73225E872885CDB90013078D /* ContentView.swift in Sources */,
 				73225EAA2885DE670013078D /* SearchBarButton.swift in Sources */,
@@ -569,11 +593,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				73225EA42885DABD0013078D /* AccountView.swift in Sources */,
+				731D9E3628B25C2000C847D6 /* OfferDescription.swift in Sources */,
 				734B9BEF2899A8B300684C2F /* Path.swift in Sources */,
 				734576B1289E9C2400828D52 /* PriceSnippet.swift in Sources */,
 				73FBADBE288C485C00200490 /* Image.swift in Sources */,
 				73FBADB3288C08E900200490 /* DIContainer.swift in Sources */,
 				73CB082D288882BC00058217 /* StandardUI.swift in Sources */,
+				731D9E3C28B25C6100C847D6 /* OfferDeliveryOptions.swift in Sources */,
 				734576AE289E9B3C00828D52 /* OfferTypeBadges.swift in Sources */,
 				734576BA289FD3F100828D52 /* CategoryInteractor.swift in Sources */,
 				734576B7289FD28400828D52 /* CategoryList.swift in Sources */,
@@ -588,6 +614,7 @@
 				739B2DD0288ABC6E00EB6453 /* Category.swift in Sources */,
 				73225E972885D5CF0013078D /* AppState.swift in Sources */,
 				73225EA12885DA940013078D /* ListingView.swift in Sources */,
+				731D9E3328B2579C00C847D6 /* StandardButton.swift in Sources */,
 				73FBADD7288D550A00200490 /* OfferTypeBadge.swift in Sources */,
 				739B2DC4288AB24F00EB6453 /* Money.swift in Sources */,
 				739B2DD3288ABCD300EB6453 /* OfferInteractor.swift in Sources */,
@@ -600,6 +627,7 @@
 				73FBADDE288D760D00200490 /* OfferView.swift in Sources */,
 				73225E9E2885D8510013078D /* HomeView.swift in Sources */,
 				739B2DCC288AB4C900EB6453 /* ShippingMethod.swift in Sources */,
+				731D9E3928B25C4A00C847D6 /* OfferOtherRecommendations.swift in Sources */,
 				739B2DBF288AB05F00EB6453 /* Offer.swift in Sources */,
 				73225E882885CDB90013078D /* ContentView.swift in Sources */,
 				73225EAB2885DE670013078D /* SearchBarButton.swift in Sources */,
@@ -883,6 +911,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		731D9E3D28B25EEC00C847D6 /* XCRemoteSwiftPackageReference "ExpandableText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NuPlay/ExpandableText";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		73CB0816288862AB00058217 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/frzi/SwiftUIRouter";
@@ -894,6 +930,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		731D9E3E28B25EEC00C847D6 /* ExpandableText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 731D9E3D28B25EEC00C847D6 /* XCRemoteSwiftPackageReference "ExpandableText" */;
+			productName = ExpandableText;
+		};
 		73CB0817288862AB00058217 /* SwiftUIRouter */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 73CB0816288862AB00058217 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;

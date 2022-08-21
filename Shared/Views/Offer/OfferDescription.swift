@@ -6,15 +6,24 @@
 //
 
 import SwiftUI
+import ExpandableText
 
 struct OfferDescription: View {
+    let offer: DetailedOffer
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("Opis")
+                .font(.title3)
+            Divider()
+            ExpandableText(text: offer.description)
+                .lineLimit(4)
+        }
     }
 }
 
 struct OfferDescription_Previews: PreviewProvider {
     static var previews: some View {
-        OfferDescription()
+        OfferDescription(offer: MockOfferInteractor.sampleDetailsOffer)
     }
 }

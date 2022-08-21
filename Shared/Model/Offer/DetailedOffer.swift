@@ -18,6 +18,9 @@ public struct DetailedOffer: Identifiable {
     let shipping: Shipping
     let inStock: Int64
     let available: Bool
+    
+    var canBeBought: Bool { self.type == .exchange_and_buy || self.type == .buy_only }
+    var canBeExchanged: Bool { self.type == .exchange_and_buy || self.type == .exchange_only }
 }
 
 extension DetailedOffer {
@@ -58,7 +61,7 @@ extension DetailedOffer {
 }
 
 extension DetailedOffer {
-    struct ShippingMethod {
+    struct ShippingMethod: Identifiable {
         let id: ShippingMethodId
         let name: String
         let price: Money

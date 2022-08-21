@@ -19,6 +19,9 @@ public struct Offer: Identifiable {
     let category: Category
     let shippingMethods: [ShippingMethod]
     let stockId: StockId
+    
+    var canBeBought: Bool { self.type == .exchange_and_buy || self.type == .buy_only }
+    var canBeExchanged: Bool { self.type == .exchange_and_buy || self.type == .exchange_only }
 }
 
 public struct OfferId: Hashable {

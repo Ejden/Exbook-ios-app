@@ -81,10 +81,19 @@ struct LoadableImage: View {
     }
     
     var placeholderImage: some View {
-        Image(systemName: "photo")
-            .resizable()
-            .frame(width: self.width, height: self.height, alignment: .leading)
-            .cornerRadius(self.cornerRadius)
+        Group {
+            if let width = width {
+                Image(systemName: "photo")
+                    .resizable()
+                    .frame(width: width, height: self.height, alignment: .leading)
+                    .cornerRadius(self.cornerRadius)
+            } else {
+                Image(systemName: "photo")
+                    .resizable()
+                    .frame(maxWidth: self.maxWidth, maxHeight: self.maxHeight, alignment: .leading)
+                    .cornerRadius(self.cornerRadius)
+            }
+        }
     }
     
     var placeholderEmpty: some View {
