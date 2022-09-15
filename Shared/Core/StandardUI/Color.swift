@@ -15,5 +15,7 @@ public extension StandardUI {
         public static let secondaryBlue = SwiftUI.Color("secondaryBlue")
         public static let gray = SwiftUI.Color("gray")
         public static let darkGray = SwiftUI.Color("darkGray")
+        public static let background = SwiftUI.Color("background")
+        public static let desk = SwiftUI.Color("desk")
     }
 }

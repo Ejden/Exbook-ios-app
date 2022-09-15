@@ -17,12 +17,15 @@ struct HomeView: View {
                 VStack {
                     SearchBarButton()
                         .padding()
+                        .background(StandardUI.Color.desk)
                         .onTapGesture {
                             navigator.navigate(.listing)
                         }
                     RecommendedOffers()
+                        .background(StandardUI.Color.desk)
                     CategoryList()
                         .padding()
+                        .background(StandardUI.Color.desk)
                 }
             }
         }

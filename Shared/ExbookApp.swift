@@ -14,6 +14,7 @@ struct ExbookApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .background(StandardUI.Color.background)
                 .environmentObject(appEnvironment.container)
         }
     }

@@ -44,16 +44,16 @@ struct OfferView: View {
             VStack {
                 OfferDetails(offer: loadedOffer)
                     .padding()
-                    .background(StandardUI.Color.darkGray)
+                    .background(StandardUI.Color.desk)
                 OfferDescription(offer: loadedOffer)
                     .padding()
-                    .background(StandardUI.Color.darkGray)
+                    .background(StandardUI.Color.desk)
                 OfferOtherRecommendations()
                     .padding()
-                    .background(StandardUI.Color.darkGray)
+                    .background(StandardUI.Color.desk)
                 OfferDeliveryOptions(offer: loadedOffer)
                     .padding()
-                    .background(StandardUI.Color.darkGray)
+                    .background(StandardUI.Color.desk)
             }
         }
     }
