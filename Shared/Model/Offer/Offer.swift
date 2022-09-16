@@ -33,10 +33,10 @@ public struct StockId: Hashable {
 }
 
 public extension Offer {
-    enum OfferType {
-        case exchange_and_buy
-        case exchange_only
-        case buy_only
+    enum OfferType: String {
+        case exchange_and_buy = "EXCHANGE_AND_BUY"
+        case exchange_only = "EXCHANGE_ONLY"
+        case buy_only = "BUY_ONLY"
     }
 }
 
@@ -63,12 +63,12 @@ public extension Offer {
 }
 
 public extension Offer {
-    enum BookCondition {
-        case new
-        case perfect
-        case lightly_used
-        case moderatly_used
-        case bad
+    enum BookCondition: String {
+        case new = "NEW"
+        case perfect = "PERFECT"
+        case lightly_used = "LIGHTLY_USED"
+        case moderatly_used = "MODERATELY_USED"
+        case bad = "BAD"
     }
 }
 

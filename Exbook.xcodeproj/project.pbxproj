@@ -83,6 +83,22 @@
 		73CB082C288882BC00058217 /* StandardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB082B288882BC00058217 /* StandardUI.swift */; };
 		73CB082D288882BC00058217 /* StandardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB082B288882BC00058217 /* StandardUI.swift */; };
 		73D0771128D45BD200227845 /* ShakeGestureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771028D45BD200227845 /* ShakeGestureExtension.swift */; };
+		73D0771328D49CFA00227845 /* DataProvidersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771228D49CFA00227845 /* DataProvidersContainer.swift */; };
+		73D0771428D49CFA00227845 /* DataProvidersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771228D49CFA00227845 /* DataProvidersContainer.swift */; };
+		73D0771628D49D5600227845 /* OfferClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771528D49D5600227845 /* OfferClient.swift */; };
+		73D0771728D49D5600227845 /* OfferClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771528D49D5600227845 /* OfferClient.swift */; };
+		73D0771928D49DBC00227845 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771828D49DBC00227845 /* UserClient.swift */; };
+		73D0771A28D49DBC00227845 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771828D49DBC00227845 /* UserClient.swift */; };
+		73D0771C28D4A0F200227845 /* OfferClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771B28D4A0F200227845 /* OfferClientApi.swift */; };
+		73D0771D28D4A0F200227845 /* OfferClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771B28D4A0F200227845 /* OfferClientApi.swift */; };
+		73D0771F28D4A0FE00227845 /* UserClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771E28D4A0FE00227845 /* UserClientApi.swift */; };
+		73D0772028D4A0FE00227845 /* UserClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771E28D4A0FE00227845 /* UserClientApi.swift */; };
+		73D0772328D4A13400227845 /* OfferRecommendationClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772228D4A13400227845 /* OfferRecommendationClientApi.swift */; };
+		73D0772428D4A13400227845 /* OfferRecommendationClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772228D4A13400227845 /* OfferRecommendationClientApi.swift */; };
+		73D0772B28D4D0CA00227845 /* OfferRecommendationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772A28D4D0CA00227845 /* OfferRecommendationClient.swift */; };
+		73D0772C28D4D0CA00227845 /* OfferRecommendationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772A28D4D0CA00227845 /* OfferRecommendationClient.swift */; };
+		73D0772E28D4D0F700227845 /* OfferRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772D28D4D0F700227845 /* OfferRecommendation.swift */; };
+		73D0772F28D4D0F700227845 /* OfferRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772D28D4D0F700227845 /* OfferRecommendation.swift */; };
 		73FBADB2288C08E900200490 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB1288C08E900200490 /* DIContainer.swift */; };
 		73FBADB3288C08E900200490 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB1288C08E900200490 /* DIContainer.swift */; };
 		73FBADB5288C092300200490 /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB4288C092300200490 /* InteractorsContainer.swift */; };
@@ -152,6 +168,14 @@
 		73CB0828288881C600058217 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		73CB082B288882BC00058217 /* StandardUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardUI.swift; sourceTree = "<group>"; };
 		73D0771028D45BD200227845 /* ShakeGestureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGestureExtension.swift; sourceTree = "<group>"; };
+		73D0771228D49CFA00227845 /* DataProvidersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvidersContainer.swift; sourceTree = "<group>"; };
+		73D0771528D49D5600227845 /* OfferClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferClient.swift; sourceTree = "<group>"; };
+		73D0771828D49DBC00227845 /* UserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
+		73D0771B28D4A0F200227845 /* OfferClientApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferClientApi.swift; sourceTree = "<group>"; };
+		73D0771E28D4A0FE00227845 /* UserClientApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClientApi.swift; sourceTree = "<group>"; };
+		73D0772228D4A13400227845 /* OfferRecommendationClientApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRecommendationClientApi.swift; sourceTree = "<group>"; };
+		73D0772A28D4D0CA00227845 /* OfferRecommendationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRecommendationClient.swift; sourceTree = "<group>"; };
+		73D0772D28D4D0F700227845 /* OfferRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRecommendation.swift; sourceTree = "<group>"; };
 		73FBADB1288C08E900200490 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		73FBADB4288C092300200490 /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
 		73FBADB7288C47E200200490 /* ImagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesInteractor.swift; sourceTree = "<group>"; };
@@ -310,9 +334,11 @@
 		739B2DBC288AB02D00EB6453 /* Offer */ = {
 			isa = PBXGroup;
 			children = (
+				73D0772928D4D0B900227845 /* Recommendation */,
 				739B2DBD288AB05F00EB6453 /* Offer.swift */,
 				739B2DD1288ABCD300EB6453 /* OfferInteractor.swift */,
 				7390E22528A0072800348E35 /* DetailedOffer.swift */,
+				73D0771528D49D5600227845 /* OfferClient.swift */,
 			);
 			path = Offer;
 			sourceTree = "<group>";
@@ -329,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				739B2DC6288AB44D00EB6453 /* User.swift */,
+				73D0771828D49DBC00227845 /* UserClient.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -389,11 +416,31 @@
 			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
+		73D0772128D4A10300227845 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				73D0771B28D4A0F200227845 /* OfferClientApi.swift */,
+				73D0771E28D4A0FE00227845 /* UserClientApi.swift */,
+				73D0772228D4A13400227845 /* OfferRecommendationClientApi.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		73D0772928D4D0B900227845 /* Recommendation */ = {
+			isa = PBXGroup;
+			children = (
+				73D0772A28D4D0CA00227845 /* OfferRecommendationClient.swift */,
+				73D0772D28D4D0F700227845 /* OfferRecommendation.swift */,
+			);
+			path = Recommendation;
+			sourceTree = "<group>";
+		};
 		73FBADB0288C08D000200490 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
 				73FBADB1288C08E900200490 /* DIContainer.swift */,
 				73FBADB4288C092300200490 /* InteractorsContainer.swift */,
+				73D0771228D49CFA00227845 /* DataProvidersContainer.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -411,6 +458,7 @@
 		73FBADC3288C4AFC00200490 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				73D0772128D4A10300227845 /* api */,
 				73FBADC4288C4B0F00200490 /* WebResourceProvider.swift */,
 			);
 			path = Infrastructure;
@@ -555,6 +603,8 @@
 				73FBADBD288C485C00200490 /* Image.swift in Sources */,
 				73FBADB2288C08E900200490 /* DIContainer.swift in Sources */,
 				73CB082C288882BC00058217 /* StandardUI.swift in Sources */,
+				73D0771F28D4A0FE00227845 /* UserClientApi.swift in Sources */,
+				73D0772B28D4D0CA00227845 /* OfferRecommendationClient.swift in Sources */,
 				731D9E3B28B25C6100C847D6 /* OfferDeliveryOptions.swift in Sources */,
 				734576AD289E9B3C00828D52 /* OfferTypeBadges.swift in Sources */,
 				734576B9289FD3F100828D52 /* CategoryInteractor.swift in Sources */,
@@ -575,9 +625,13 @@
 				73FBADD6288D550A00200490 /* OfferTypeBadge.swift in Sources */,
 				739B2DC3288AB24F00EB6453 /* Money.swift in Sources */,
 				739B2DD2288ABCD300EB6453 /* OfferInteractor.swift in Sources */,
+				73D0771628D49D5600227845 /* OfferClient.swift in Sources */,
 				73FBADCF288C7B9F00200490 /* AppEnvironment.swift in Sources */,
+				73D0771928D49DBC00227845 /* UserClient.swift in Sources */,
 				734576BC289FFBA200828D52 /* OfferDetails.swift in Sources */,
+				73D0771C28D4A0F200227845 /* OfferClientApi.swift in Sources */,
 				73CB0829288881C600058217 /* Color.swift in Sources */,
+				73D0771328D49CFA00227845 /* DataProvidersContainer.swift in Sources */,
 				73FBADC0288C492E00200490 /* ImageProvider.swift in Sources */,
 				734B9BF42899AC7000684C2F /* RecommendedOffers.swift in Sources */,
 				734576B3289EBB8200828D52 /* LoadableImage.swift in Sources */,
@@ -586,11 +640,13 @@
 				739B2DCB288AB4C900EB6453 /* ShippingMethod.swift in Sources */,
 				731D9E3828B25C4A00C847D6 /* OfferOtherRecommendations.swift in Sources */,
 				739B2DBE288AB05F00EB6453 /* Offer.swift in Sources */,
+				73D0772E28D4D0F700227845 /* OfferRecommendation.swift in Sources */,
 				73225E872885CDB90013078D /* ContentView.swift in Sources */,
 				73225EAA2885DE670013078D /* SearchBarButton.swift in Sources */,
 				73FBADCC288C796800200490 /* NetworkingHelpers.swift in Sources */,
 				73FBADC5288C4B0F00200490 /* WebResourceProvider.swift in Sources */,
 				73225EA72885DB940013078D /* BasketView.swift in Sources */,
+				73D0772328D4A13400227845 /* OfferRecommendationClientApi.swift in Sources */,
 				739B2DD5288ABF0E00EB6453 /* ListingSearchBar.swift in Sources */,
 				7390E22628A0072800348E35 /* DetailedOffer.swift in Sources */,
 				73CB081E28886AE800058217 /* MainView.swift in Sources */,
@@ -609,17 +665,20 @@
 				734B9BEF2899A8B300684C2F /* Path.swift in Sources */,
 				734576B1289E9C2400828D52 /* PriceSnippet.swift in Sources */,
 				73FBADBE288C485C00200490 /* Image.swift in Sources */,
+				73D0772C28D4D0CA00227845 /* OfferRecommendationClient.swift in Sources */,
 				73FBADB3288C08E900200490 /* DIContainer.swift in Sources */,
 				73CB082D288882BC00058217 /* StandardUI.swift in Sources */,
 				731D9E3C28B25C6100C847D6 /* OfferDeliveryOptions.swift in Sources */,
 				734576AE289E9B3C00828D52 /* OfferTypeBadges.swift in Sources */,
 				734576BA289FD3F100828D52 /* CategoryInteractor.swift in Sources */,
 				734576B7289FD28400828D52 /* CategoryList.swift in Sources */,
+				73D0771428D49CFA00227845 /* DataProvidersContainer.swift in Sources */,
 				73FBADD3288D50CA00200490 /* ListingOfferRow.swift in Sources */,
 				7390E22A28A00B6F00348E35 /* StarsCounter.swift in Sources */,
 				73CB08262888814500058217 /* Spacing.swift in Sources */,
 				739B2DC8288AB44D00EB6453 /* User.swift in Sources */,
 				734B9BF22899A98B00684C2F /* NavigatorExtenstions.swift in Sources */,
+				73D0771D28D4A0F200227845 /* OfferClientApi.swift in Sources */,
 				73FBADB6288C092300200490 /* InteractorsContainer.swift in Sources */,
 				734B9BF82899AC8000684C2F /* RecommendedOffer.swift in Sources */,
 				73FBADB9288C47E200200490 /* ImagesInteractor.swift in Sources */,
@@ -636,6 +695,7 @@
 				73FBADC1288C492E00200490 /* ImageProvider.swift in Sources */,
 				734B9BF52899AC7000684C2F /* RecommendedOffers.swift in Sources */,
 				734576B4289EBB8200828D52 /* LoadableImage.swift in Sources */,
+				73D0772F28D4D0F700227845 /* OfferRecommendation.swift in Sources */,
 				73FBADDE288D760D00200490 /* OfferView.swift in Sources */,
 				73225E9E2885D8510013078D /* HomeView.swift in Sources */,
 				739B2DCC288AB4C900EB6453 /* ShippingMethod.swift in Sources */,
@@ -643,15 +703,19 @@
 				739B2DBF288AB05F00EB6453 /* Offer.swift in Sources */,
 				73225E882885CDB90013078D /* ContentView.swift in Sources */,
 				73225EAB2885DE670013078D /* SearchBarButton.swift in Sources */,
+				73D0771A28D49DBC00227845 /* UserClient.swift in Sources */,
+				73D0772428D4A13400227845 /* OfferRecommendationClientApi.swift in Sources */,
 				73FBADCD288C796800200490 /* NetworkingHelpers.swift in Sources */,
 				73FBADC6288C4B0F00200490 /* WebResourceProvider.swift in Sources */,
 				73225EA82885DB940013078D /* BasketView.swift in Sources */,
 				739B2DD6288ABF0E00EB6453 /* ListingSearchBar.swift in Sources */,
+				73D0772028D4A0FE00227845 /* UserClientApi.swift in Sources */,
 				7390E22728A0072800348E35 /* DetailedOffer.swift in Sources */,
 				73CB081F28886AE800058217 /* MainView.swift in Sources */,
 				73FBADDA288D5B1800200490 /* Loadable.swift in Sources */,
 				73225E862885CDB90013078D /* ExbookApp.swift in Sources */,
 				73FBADCA288C4C0500200490 /* APICall.swift in Sources */,
+				73D0771728D49D5600227845 /* OfferClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

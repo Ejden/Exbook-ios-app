@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ListingOfferRow: View {
-    let offer: Offer
+    let offer: DetailedOffer
     
-    init(offer: Offer) {
+    init(offer: DetailedOffer) {
         self.offer = offer
         print("Initialied offer \(offer.id.raw)")
     }
@@ -79,7 +79,7 @@ private struct ListingOfferImage: View {
 
 struct ListingOfferRow_Preview: PreviewProvider {
     static var previews: some View {
-        ListingOfferRow(offer: MockOfferInteractor.sampleOffer1)
+        ListingOfferRow(offer: MockOfferInteractor.sampleDetailsOffer)
             .preferredColorScheme(.light)
             .previewDisplayName("Light mode")
             .environmentObject(DIContainer.mock)

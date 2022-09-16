@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct Money {
-    let amount: Decimal
-    let currency: Currency
+public struct Money {
+    public let amount: Decimal
+    public let currency: Currency
+    
+    public static func ofPln(_ amount: Decimal) -> Self {
+        return Money(amount: amount, currency: .pln)
+    }
 }
 
-enum Currency {
-    case pln
+public enum Currency: String {
+    case pln = "PLN"
 }

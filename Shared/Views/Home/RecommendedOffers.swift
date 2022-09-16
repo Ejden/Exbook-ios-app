@@ -11,7 +11,7 @@ import SwiftUIRouter
 struct RecommendedOffers: View {
     @EnvironmentObject var container: DIContainer
     @EnvironmentObject var navigator: Navigator
-    @State private var offers: Loadable<Array<Offer>> = .loading
+    @State private var offers: Loadable<Array<OfferRecommendation>> = .loading
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,12 +24,12 @@ struct RecommendedOffers: View {
             }
         }
         .padding()
-        .onAppear {
-            container.interactors.offerInteractor.fetchRecommendations($offers)
+        .task {
+            offers = await container.interactors.offerInteractor.fetchRecommendations()
         }
     }
     
-    @ViewBuilder func renderOffers(_ loadedOffers: Array<Offer>) -> some View {
+    @ViewBuilder func renderOffers(_ loadedOffers: Array<OfferRecommendation>) -> some View {
         ScrollView(.horizontal) {
             LazyHStack {
                 ForEach(loadedOffers) { offer in

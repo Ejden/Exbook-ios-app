@@ -8,5 +8,5 @@
 import Foundation
 
 public struct RawImage {
-    let url: URL
+    public let url: URL
 }

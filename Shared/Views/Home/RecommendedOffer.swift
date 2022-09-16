@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecommendedOffer: View {
     @EnvironmentObject private var di: DIContainer
-    let offer: Offer
+    let offer: OfferRecommendation
     
     var body: some View {
         VStack(alignment: .leading, spacing: StandardUI.Spacing.extraSmall) {
@@ -33,7 +33,7 @@ struct RecommendedOffer: View {
 
 struct RecommendedOffer_Previews: PreviewProvider {
     static var previews: some View {
-        RecommendedOffer(offer: MockOfferInteractor.sampleOffer1)
+        RecommendedOffer(offer: MockOfferInteractor.sampleRecommendation)
             .environmentObject(DIContainer.mock)
     }
 }

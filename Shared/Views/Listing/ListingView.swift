@@ -11,7 +11,7 @@ import SwiftUIRouter
 struct ListingView: View {
     @EnvironmentObject var injected: DIContainer
     @EnvironmentObject var navigator: Navigator
-    @State var offers: [Offer] = []
+    @State var offers: [DetailedOffer] = []
     @State var searchingPhrase: String = ""
     
     var body: some View {
@@ -29,8 +29,8 @@ struct ListingView: View {
                 }
             }
         }
-        .onAppear {
-            injected.interactors.offerInteractor.fetchOffers($offers, page: 0)
+        .task {
+            offers = await injected.interactors.offerInteractor.fetchOffers(page: 0)
         }
     }
     

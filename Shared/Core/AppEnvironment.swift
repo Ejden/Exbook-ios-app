@@ -14,7 +14,8 @@ struct AppEnvironment {
 extension AppEnvironment {
     static func create() -> AppEnvironment {
         let urlSession = configureSession()
-        let interactors = configureInteractors(imageProvider: RealImageProvider(session: urlSession, baseUrl: ""))
+        let dataProviders = configureDataProviders(urlSession: urlSession, baseApiUrl: "http://exbook.pl/api")
+        let interactors = configureInteractors(dataProviders: dataProviders)
         
         let container = DIContainer(
             appState: AppState(),
@@ -35,13 +36,22 @@ extension AppEnvironment {
         return URLSession(configuration: configuration)
     }
     
-    private static func configureInteractors(
-        imageProvider: ImageProvider
-    ) -> DIContainer.Interactors {
+    private static func configureInteractors(dataProviders: DIContainer.DataProviders) -> DIContainer.Interactors {
         return DIContainer.Interactors(
-            offerInteractor: RealOfferInteractor(),
-            imagesInteractor: RealImagesInteractor(imageProvider: imageProvider),
+            offerInteractor: RealOfferInteractor(
+                offerClient: dataProviders.offerClient,
+                recommendationsClient: dataProviders.offerRecommendationClient
+            ),
+            imagesInteractor: RealImagesInteractor(imageProvider: dataProviders.imageProvider),
             categoryInteractor: RealCategoryInteractor()
+        )
+    }
+    
+    private static func configureDataProviders(urlSession: URLSession, baseApiUrl: String) -> DIContainer.DataProviders {
+        return DIContainer.DataProviders(
+            imageProvider: RealImageProvider(session: urlSession, baseUrl: ""),
+            offerClient: OfferClientApi(urlSession: urlSession, baseUrl: ""),
+            offerRecommendationClient: OfferReccomendationClientApi(urlSession: urlSession, baseUrl: baseApiUrl)
         )
     }
 }

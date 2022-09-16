@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUIRouter
 
 struct OfferView: View {
-    var offerId: OfferId
+    private let offerId: OfferId
     
     @EnvironmentObject private var container: DIContainer
     @State private var offer: Loadable<DetailedOffer> = .loading
@@ -28,8 +28,8 @@ struct OfferView: View {
                 }
             }
         }
-        .onAppear {
-            container.interactors.offerInteractor.fetchDetailedOffer($offer, id: offerId)
+        .task {
+            offer = await container.interactors.offerInteractor.fetchOffer(id: offerId)
         }
     }
     

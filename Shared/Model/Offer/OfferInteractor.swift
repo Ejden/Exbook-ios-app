@@ -9,72 +9,44 @@ import Foundation
 import SwiftUI
 
 protocol OfferInteractor {
-    func fetchOffer(_ bind: Binding<Loadable<Offer>>, id: OfferId)
-    func fetchDetailedOffer(_ bind: LoadableBind<DetailedOffer>, id: OfferId)
-    func fetchOffers(_ bind: Binding<Array<Offer>>, page: Int)
-    func fetchRecommendations(_ bind: Binding<Loadable<Array<Offer>>>)
+    func fetchOffer(id: OfferId) async -> Loadable<DetailedOffer>
+    func fetchOffers(page: Int) async -> Array<DetailedOffer>
+    func fetchRecommendations() async -> Loadable<Array<OfferRecommendation>>
 }
 
 class RealOfferInteractor: OfferInteractor {
-    func fetchOffer(_ bind: Binding<Loadable<Offer>>, id: OfferId) {
-        bind.wrappedValue = .loaded(MockOfferInteractor.sampleOffer1)
+    private let offerClient: OfferClient
+    private let recommendationsClient: OfferRecommendationClient
+    
+    init(offerClient: OfferClient, recommendationsClient: OfferRecommendationClient) {
+        self.offerClient = offerClient
+        self.recommendationsClient = recommendationsClient
     }
     
-    func fetchDetailedOffer(_ bind: LoadableBind<DetailedOffer>, id: OfferId) {
-        bind.wrappedValue = .loaded(MockOfferInteractor.sampleDetailsOffer)
+    func fetchOffer(id: OfferId) async -> Loadable<DetailedOffer> {
+        return await offerClient.fetchOffer(id: id)
     }
     
-    func fetchOffers(_ bind: Binding<Array<Offer>>, page: Int) {
-        bind.wrappedValue = generateOffers()
+    func fetchOffers(page: Int) async -> Array<DetailedOffer> {
+        return await offerClient.fetchOffers(page: page)
     }
     
-    private func generateOffers() -> Array<Offer> {
-        var offers: [Offer] = []
-        for i in 1...100 {
-            offers.append(
-                Offer(
-                    id: OfferId(raw: "offer-id-\(i)"),
-                    book: Offer.Book(author: "Joanne K. Rowling", title: "Harry Potter i kamień filozoficzny", isbn: "1234567890", condition: .bad),
-                    images: Offer.Images(
-                        thumbnail: RawImage(url: URL(string: "https://www.ukrgate.com/eng/wp-content/uploads/2021/02/The-Ukrainian-Book-Institute-Purchases-380.9-Thousand-Books-for-Public-Libraries1.jpeg")!),
-                        allImages: [RawImage(url: URL(string: "https://www.ukrgate.com/eng/wp-content/uploads/2021/02/The-Ukrainian-Book-Institute-Purchases-380.9-Thousand-Books-for-Public-Libraries1.jpeg")!)]
-                    ),
-                    description: "Some offer description",
-                    type: .exchange_and_buy,
-                    seller: Offer.Seller(id: UserId(raw: "user-id")),
-                    price: Money(amount: Decimal(10.53), currency: .pln),
-                    location: "Warsaw",
-                    category: Offer.Category(id: CategoryId(raw: "category-id")),
-                    shippingMethods: [Offer.ShippingMethod(id: ShippingMethodId(raw: "shipping-method-id"), price: Money(amount: Decimal(12.59), currency: .pln))],
-                    stockId: StockId(raw: "stock-id")
-                )
-            )
-        }
-        
-        return offers
+    func fetchRecommendations() async -> Loadable<Array<OfferRecommendation>> {
+        return await recommendationsClient.fetchRecommendations()
     }
-    
-    func fetchRecommendations(_ bind: Binding<Loadable<Array<Offer>>>) {
-        bind.wrappedValue = .loaded(generateOffers())
-    }
-
 }
 
 public class MockOfferInteractor: OfferInteractor {
-    func fetchOffer(_ bind: Binding<Loadable<Offer>>, id: OfferId) {
-        bind.wrappedValue = .loaded(MockOfferInteractor.sampleOffer1)
+    func fetchOffer(id: OfferId) async -> Loadable<DetailedOffer> {
+        return .loaded(Self.sampleDetailsOffer)
     }
     
-    func fetchDetailedOffer(_ bind: LoadableBind<DetailedOffer>, id: OfferId) {
-        bind.wrappedValue = .loaded(Self.sampleDetailsOffer)
+    func fetchOffers(page: Int) async -> Array<DetailedOffer> {
+        return [Self.sampleDetailsOffer, Self.sampleDetailsOffer]
     }
     
-    func fetchOffers(_ bind: Binding<Array<Offer>>, page: Int) {
-        bind.wrappedValue = [MockOfferInteractor.sampleOffer1, MockOfferInteractor.sampleOffer2]
-    }
-    
-    func fetchRecommendations(_ bind: Binding<Loadable<Array<Offer>>>) {
-        bind.wrappedValue = .loaded([MockOfferInteractor.sampleOffer1, MockOfferInteractor.sampleOffer2])
+    func fetchRecommendations() async -> Loadable<Array<OfferRecommendation>> {
+        return .loaded([Self.sampleRecommendation, Self.sampleRecommendation])
     }
 
     
@@ -135,5 +107,17 @@ public class MockOfferInteractor: OfferInteractor {
         ),
         inStock: 64,
         available: true
+    )
+    
+    public static let sampleRecommendation = OfferRecommendation(
+        id: OfferId(raw: "offer-id-1"),
+        book: OfferRecommendation.Book(author: "Joanne K. Rowling", title: "Harry Potter i kamień filozoficzny", isbn: "1234567890", condition: .perfect),
+        images: OfferRecommendation.Images(
+            thumbnail: sampleDetailsOffer.images.thumbnail,
+            allImages: sampleDetailsOffer.images.allImages
+        ),
+        type: .buy_only,
+        seller: OfferRecommendation.Seller(id: UserId(raw: "user-id"), username: "j.kowalski", firstName: "Jan", lastName: "Kowalski", grade: 3.5),
+        price: Money.ofPln(10.50)
     )
 }
