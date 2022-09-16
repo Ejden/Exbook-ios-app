@@ -12,6 +12,9 @@ struct AccountView: View {
         MainView {
             Text("Account View")
         }
+        .onShake {
+            print("ELO")
+        }
     }
 }
 

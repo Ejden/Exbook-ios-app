@@ -82,6 +82,7 @@
 		73CB082A288881C600058217 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB0828288881C600058217 /* Color.swift */; };
 		73CB082C288882BC00058217 /* StandardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB082B288882BC00058217 /* StandardUI.swift */; };
 		73CB082D288882BC00058217 /* StandardUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CB082B288882BC00058217 /* StandardUI.swift */; };
+		73D0771128D45BD200227845 /* ShakeGestureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0771028D45BD200227845 /* ShakeGestureExtension.swift */; };
 		73FBADB2288C08E900200490 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB1288C08E900200490 /* DIContainer.swift */; };
 		73FBADB3288C08E900200490 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB1288C08E900200490 /* DIContainer.swift */; };
 		73FBADB5288C092300200490 /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB4288C092300200490 /* InteractorsContainer.swift */; };
@@ -150,6 +151,7 @@
 		73CB08242888814500058217 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		73CB0828288881C600058217 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		73CB082B288882BC00058217 /* StandardUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardUI.swift; sourceTree = "<group>"; };
+		73D0771028D45BD200227845 /* ShakeGestureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGestureExtension.swift; sourceTree = "<group>"; };
 		73FBADB1288C08E900200490 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		73FBADB4288C092300200490 /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
 		73FBADB7288C47E200200490 /* ImagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesInteractor.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		73225E932885D40D0013078D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				73D0770F28D45B8E00227845 /* UIKitExtensions */,
 				73FBADB0288C08D000200490 /* DependencyInjection */,
 				73CB0822288880DA00058217 /* StandardUI */,
 				73FBADCE288C7B9F00200490 /* AppEnvironment.swift */,
@@ -376,6 +379,14 @@
 				73CB082B288882BC00058217 /* StandardUI.swift */,
 			);
 			path = StandardUI;
+			sourceTree = "<group>";
+		};
+		73D0770F28D45B8E00227845 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				73D0771028D45BD200227845 /* ShakeGestureExtension.swift */,
+			);
+			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
 		73FBADB0288C08D000200490 /* DependencyInjection */ = {
@@ -557,6 +568,7 @@
 				734B9BF72899AC8000684C2F /* RecommendedOffer.swift in Sources */,
 				73FBADB8288C47E200200490 /* ImagesInteractor.swift in Sources */,
 				739B2DCF288ABC6E00EB6453 /* Category.swift in Sources */,
+				73D0771128D45BD200227845 /* ShakeGestureExtension.swift in Sources */,
 				73225E962885D5CF0013078D /* AppState.swift in Sources */,
 				73225EA02885DA940013078D /* ListingView.swift in Sources */,
 				731D9E3228B2579C00C847D6 /* StandardButton.swift in Sources */,
