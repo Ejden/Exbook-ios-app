@@ -7,63 +7,63 @@
 
 public struct DetailedOffer: Identifiable {
     public let id: OfferId
-    let book: Book
-    let images: Images
-    let description: String
-    let type: Offer.OfferType
-    let seller: Seller
-    let price: Money?
-    let location: String
-    let category: Category
-    let shipping: Shipping
-    let inStock: Int64
-    let available: Bool
+    public let book: Book
+    public let images: Images
+    public let description: String
+    public let type: Offer.OfferType
+    public let seller: Seller
+    public let price: Money?
+    public let location: String
+    public let category: Category
+    public let shipping: Shipping
+    public let inStock: Int64
+    public let available: Bool
     
-    var canBeBought: Bool { self.type == .exchange_and_buy || self.type == .buy_only }
-    var canBeExchanged: Bool { self.type == .exchange_and_buy || self.type == .exchange_only }
+    public var canBeBought: Bool { self.type == .exchange_and_buy || self.type == .buy_only }
+    public var canBeExchanged: Bool { self.type == .exchange_and_buy || self.type == .exchange_only }
 }
 
 extension DetailedOffer {
-    struct Book {
-        let author: String
-        let title: String
-        let isbn: String?
-        let condition: Offer.BookCondition
+    public struct Book {
+        public let author: String
+        public let title: String
+        public let isbn: String?
+        public let condition: Offer.BookCondition
     }
 }
 
 extension DetailedOffer {
-    struct Images {
-        let thumbnail: RawImage
-        let allImages: [RawImage]
+    public struct Images {
+        public let thumbnail: RawImage
+        public let allImages: [RawImage]
     }
 }
 
 extension DetailedOffer {
-    struct Seller {
-        let id: UserId
-        let username: String
-        let grade: Double
+    public struct Seller {
+        public let id: UserId
+        public let username: String
+        public let grade: Double
     }
 }
 
 extension DetailedOffer {
-    struct Category {
-        let id: CategoryId
+    public struct Category {
+        public let id: CategoryId
     }
 }
 
 extension DetailedOffer {
-    struct Shipping {
-        let shippingMethods: [ShippingMethod]
-        let cheapestMethod: ShippingMethod
+    public struct Shipping {
+        public let shippingMethods: [ShippingMethod]
+        public let cheapestMethod: ShippingMethod
     }
 }
 
 extension DetailedOffer {
-    struct ShippingMethod: Identifiable {
-        let id: ShippingMethodId
-        let name: String
-        let price: Money
+    public struct ShippingMethod: Identifiable {
+        public let id: ShippingMethodId
+        public let name: String
+        public let price: Money
     }
 }

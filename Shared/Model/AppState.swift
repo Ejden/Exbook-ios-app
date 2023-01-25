@@ -7,10 +7,21 @@
 
 import Foundation
 
-struct AppState {
-    let userData: UserData = UserData()
+class AppState {
+    let userState: UserState = UserState()
 }
 
-struct UserData {
-    var isLoggedIn: Bool = false
+class UserState {
+    private(set) var isLoggedIn: Bool = false
+    private(set) var token: UserToken? = nil
+    
+    func logInUser(userToken: UserToken) {
+        self.token = userToken
+        self.isLoggedIn = true
+    }
+    
+    func logoutUser() {
+        self.token = nil
+        self.isLoggedIn = false
+    }
 }

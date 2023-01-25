@@ -17,7 +17,7 @@ enum Path {
     var raw: String {
         switch self {
         case .home:
-            return "/home"
+            return "/"
         case .listing:
             return "/listing"
         case .basket:

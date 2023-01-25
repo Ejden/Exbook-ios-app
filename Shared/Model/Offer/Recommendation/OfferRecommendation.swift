@@ -13,7 +13,7 @@ public struct OfferRecommendation: Identifiable {
     public let images: Images
     public let type: Offer.OfferType
     public let seller: Seller
-    public let price: Money
+    public let price: Money?
 }
 
 extension OfferRecommendation {

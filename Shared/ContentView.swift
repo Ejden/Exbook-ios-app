@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftUIRouter
 
 struct ContentView: View {
+    @EnvironmentObject private var container: DIContainer
     
     var body: some View {
         ZStack {
@@ -23,7 +24,12 @@ struct ContentView: View {
                     BasketView()
                 }
                 Route("/account") {
-                    AccountView()
+                    if container.appState.userState.isLoggedIn {
+                        AccountView()
+                    } else {
+                        LoginView(userService: container.interactors.userService)
+                            .environmentObject(container)
+                    }
                 }
                 Route("/offer/:offerId", validator: validateOfferId) { offerId in
                     OfferView(offerId: offerId)

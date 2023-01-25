@@ -21,7 +21,8 @@ class DIContainer: ObservableObject {
         interactors: Interactors(
             offerInteractor: MockOfferInteractor(),
             imagesInteractor: MockImagesInteractor(),
-            categoryInteractor: MockCategoryInteractor()
+            categoryInteractor: MockCategoryInteractor(),
+            userService: RealUserService(userClient: MockUserClientApi(), appState: AppState())
         )
     )
 }

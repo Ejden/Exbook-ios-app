@@ -8,6 +8,12 @@
 import SwiftUIRouter
 
 extension Navigator {
+    static func initWith(initialPath: Path) -> Navigator {
+        return Navigator.init(initialPath: initialPath.raw)
+    }
+}
+
+extension Navigator {
     func navigate(_ path: Path) {
         navigate(path.raw)
     }

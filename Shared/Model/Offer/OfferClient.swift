@@ -9,5 +9,5 @@ import Foundation
 
 protocol OfferClient {
     func fetchOffer(id: OfferId) async -> Loadable<DetailedOffer>
-    func fetchOffers(page: Int) async -> Array<DetailedOffer>
+    func fetchOffers(searchingPhrase: String, page: Int) async -> Array<DetailedOffer>
 }

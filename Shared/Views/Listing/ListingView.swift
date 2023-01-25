@@ -16,10 +16,17 @@ struct ListingView: View {
     
     var body: some View {
         MainView {
-            VStack {
-                ListingSearchBar(searchingPhrase: $searchingPhrase)
+            VStack(spacing: StandardUI.Spacing.noSpacing) {
+                ListingSearchBar(searchingPhrase: $searchingPhrase) { queryParams in
+                    Task {
+                        let loadedOffers = await injected.interactors.offerInteractor.fetchOffers(searchingPhrase: queryParams.searchingPhrase, page: 0)
+                        offers = loadedOffers
+                    }
+                }
                     .padding(.leading, StandardUI.Spacing.small)
                     .padding(.trailing, StandardUI.Spacing.small)
+                    .padding(.bottom, StandardUI.Spacing.small)
+                    .background(StandardUI.Color.desk)
                 if searchingPhrase.isEmpty {
                     searchView
                 } else if offers.isEmpty {
@@ -28,9 +35,6 @@ struct ListingView: View {
                     offersList
                 }
             }
-        }
-        .task {
-            offers = await injected.interactors.offerInteractor.fetchOffers(page: 0)
         }
     }
     
@@ -51,19 +55,21 @@ struct ListingView: View {
                 ForEach(offers) { (offer) in
                     ListingOfferRow(offer: offer)
                         .onTapGesture {
-                            navigator.navigate("/offer")
+                            navigator.navigate(.offer(offer.id))
                         }
                     Divider()
                 }
             }
         }
+        .padding(.top, StandardUI.Spacing.small)
+        .background(StandardUI.Color.desk)
     }
 }
 
 struct ListingView_Previews: PreviewProvider {
     static var previews: some View {
-        ListingView()
+        ListingView(offers: [MockOfferInteractor.sampleDetailsOffer, MockOfferInteractor.sampleDetailsOffer], searchingPhrase: "Harry")
             .environmentObject(DIContainer.mock)
-            .environmentObject(Navigator.init(initialPath: "/listing"))
+            .environmentObject(Navigator.initWith(initialPath: .listing))
     }
 }

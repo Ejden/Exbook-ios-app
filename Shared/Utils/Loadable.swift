@@ -38,8 +38,47 @@ enum Loadable<T> {
     }
 }
 
+enum SafeLoadable<T, E : Error> {
+    case loading
+    case loaded(T)
+    case failed(E)
+    
+    var value: T? {
+        switch self {
+        case let .loaded(value): return value
+        default: return nil
+        }
+    }
+    
+    var error: E? {
+        switch self {
+        case let .failed(error): return error
+        default: return nil
+        }
+    }
+    
+    mutating func setLoaded(value: T) {
+        self = .loaded(value)
+    }
+    
+    mutating func setFailed(error: E) {
+        self = .failed(error)
+    }
+}
+
 extension Loadable: Equatable where T: Equatable {
     static func == (lhs: Loadable<T>, rhs: Loadable<T>) -> Bool {
+        switch (lhs, rhs) {
+        case (.loading, .loading): return true
+        case let (.loaded(lhsV), .loaded(rhsV)): return lhsV == rhsV
+        case let (.failed(lhsE), .failed(rhsE)): return lhsE.localizedDescription == rhsE.localizedDescription
+        default: return false
+        }
+    }
+}
+
+extension SafeLoadable: Equatable where T: Equatable, E: Error {
+    static func == (lhs: SafeLoadable<T, E>, rhs: SafeLoadable<T, E>) -> Bool {
         switch (lhs, rhs) {
         case (.loading, .loading): return true
         case let (.loaded(lhsV), .loaded(rhsV)): return lhsV == rhsV

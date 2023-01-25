@@ -14,7 +14,7 @@ struct MainView<Content: View>: View {
     var body: some View {
         VStack(spacing: StandardUI.Spacing.noSpacing) {
             content()
-            Spacer()
+                .frame(maxHeight: .infinity)
             CommonNavigationBar()
         }
         .ignoresSafeArea(edges: .horizontal)
@@ -24,6 +24,7 @@ struct MainView<Content: View>: View {
 
 struct CommonNavigationBar: View {
     @EnvironmentObject var navigator: Navigator
+    
     var activeItem: Int {
         switch navigator.path {
         case "/":
@@ -60,7 +61,7 @@ struct CommonNavigationBar: View {
             Spacer()
         }
         .padding(.top, StandardUI.Spacing.small)
-        .background(.ultraThickMaterial)
+        .background(StandardUI.Color.desk)
     }
 }
 
@@ -96,13 +97,13 @@ struct MainView_Previews: PreviewProvider {
         MainView() {
             List(
                 [
-                    MockOfferInteractor.sampleOffer1,
-                    MockOfferInteractor.sampleOffer1,
-                    MockOfferInteractor.sampleOffer1,
-                    MockOfferInteractor.sampleOffer1,
-                    MockOfferInteractor.sampleOffer1,
-                    MockOfferInteractor.sampleOffer1,
-                    MockOfferInteractor.sampleOffer1,
+                    MockOfferInteractor.sampleDetailsOffer,
+                    MockOfferInteractor.sampleDetailsOffer,
+                    MockOfferInteractor.sampleDetailsOffer,
+                    MockOfferInteractor.sampleDetailsOffer,
+                    MockOfferInteractor.sampleDetailsOffer,
+                    MockOfferInteractor.sampleDetailsOffer,
+                    MockOfferInteractor.sampleDetailsOffer,
                 ]
             ) { offer in
                 ListingOfferRow(offer: offer)

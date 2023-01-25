@@ -14,11 +14,22 @@ struct AppEnvironment {
 extension AppEnvironment {
     static func create() -> AppEnvironment {
         let urlSession = configureSession()
-        let dataProviders = configureDataProviders(urlSession: urlSession, baseApiUrl: "http://exbook.pl/api")
-        let interactors = configureInteractors(dataProviders: dataProviders)
+        let appState = AppState()
+        let basicJsonEncoder = JSONEncoder()
+        let basicJsonDecoder = JSONDecoder()
+        let dataProviders = configureDataProviders(
+            urlSession: urlSession,
+            baseApiUrl: "http://exbook.pl/api",
+            jsonEncoder: basicJsonEncoder,
+            jsonDecoder: basicJsonDecoder
+        )
+        let interactors = configureInteractors(
+            dataProviders: dataProviders,
+            appState: appState
+        )
         
         let container = DIContainer(
-            appState: AppState(),
+            appState: appState,
             interactors: interactors
         )
         
@@ -36,22 +47,32 @@ extension AppEnvironment {
         return URLSession(configuration: configuration)
     }
     
-    private static func configureInteractors(dataProviders: DIContainer.DataProviders) -> DIContainer.Interactors {
+    private static func configureInteractors(
+        dataProviders: DIContainer.DataProviders,
+        appState: AppState
+    ) -> DIContainer.Interactors {
         return DIContainer.Interactors(
             offerInteractor: RealOfferInteractor(
                 offerClient: dataProviders.offerClient,
                 recommendationsClient: dataProviders.offerRecommendationClient
             ),
             imagesInteractor: RealImagesInteractor(imageProvider: dataProviders.imageProvider),
-            categoryInteractor: RealCategoryInteractor()
+            categoryInteractor: RealCategoryInteractor(),
+            userService: RealUserService(userClient: dataProviders.userClient, appState: appState)
         )
     }
     
-    private static func configureDataProviders(urlSession: URLSession, baseApiUrl: String) -> DIContainer.DataProviders {
+    private static func configureDataProviders(
+        urlSession: URLSession,
+        baseApiUrl: String,
+        jsonEncoder: JSONEncoder,
+        jsonDecoder: JSONDecoder
+    ) -> DIContainer.DataProviders {
         return DIContainer.DataProviders(
             imageProvider: RealImageProvider(session: urlSession, baseUrl: ""),
-            offerClient: OfferClientApi(urlSession: urlSession, baseUrl: ""),
-            offerRecommendationClient: OfferReccomendationClientApi(urlSession: urlSession, baseUrl: baseApiUrl)
+            offerClient: OfferClientApi(urlSession: urlSession, baseUrl: baseApiUrl),
+            offerRecommendationClient: OfferReccomendationClientApi(urlSession: urlSession, baseUrl: baseApiUrl),
+            userClient: UserClientApi(baseUrl: baseApiUrl, jsonEncoder: jsonEncoder, jsonDecoder: jsonDecoder)
         )
     }
 }

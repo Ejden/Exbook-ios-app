@@ -48,12 +48,14 @@
 		734576BD289FFBA200828D52 /* OfferDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734576BB289FFBA200828D52 /* OfferDetails.swift */; };
 		734B9BEE2899A8B300684C2F /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BED2899A8B300684C2F /* Path.swift */; };
 		734B9BEF2899A8B300684C2F /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BED2899A8B300684C2F /* Path.swift */; };
-		734B9BF12899A98B00684C2F /* NavigatorExtenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BF02899A98B00684C2F /* NavigatorExtenstions.swift */; };
-		734B9BF22899A98B00684C2F /* NavigatorExtenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BF02899A98B00684C2F /* NavigatorExtenstions.swift */; };
+		734B9BF12899A98B00684C2F /* NavigatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BF02899A98B00684C2F /* NavigatorExtensions.swift */; };
+		734B9BF22899A98B00684C2F /* NavigatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BF02899A98B00684C2F /* NavigatorExtensions.swift */; };
 		734B9BF42899AC7000684C2F /* RecommendedOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BF32899AC7000684C2F /* RecommendedOffers.swift */; };
 		734B9BF52899AC7000684C2F /* RecommendedOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BF32899AC7000684C2F /* RecommendedOffers.swift */; };
 		734B9BF72899AC8000684C2F /* RecommendedOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BF62899AC8000684C2F /* RecommendedOffer.swift */; };
 		734B9BF82899AC8000684C2F /* RecommendedOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B9BF62899AC8000684C2F /* RecommendedOffer.swift */; };
+		734D578E297F0831003EA2C9 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D578D297F0831003EA2C9 /* LoginViewViewModel.swift */; };
+		734D578F297F0831003EA2C9 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D578D297F0831003EA2C9 /* LoginViewViewModel.swift */; };
 		7390E22628A0072800348E35 /* DetailedOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7390E22528A0072800348E35 /* DetailedOffer.swift */; };
 		7390E22728A0072800348E35 /* DetailedOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7390E22528A0072800348E35 /* DetailedOffer.swift */; };
 		7390E22928A00B6F00348E35 /* StarsCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7390E22828A00B6F00348E35 /* StarsCounter.swift */; };
@@ -99,6 +101,16 @@
 		73D0772C28D4D0CA00227845 /* OfferRecommendationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772A28D4D0CA00227845 /* OfferRecommendationClient.swift */; };
 		73D0772E28D4D0F700227845 /* OfferRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772D28D4D0F700227845 /* OfferRecommendation.swift */; };
 		73D0772F28D4D0F700227845 /* OfferRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0772D28D4D0F700227845 /* OfferRecommendation.swift */; };
+		73D150A328D5B9A2001D7618 /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150A228D5B9A2001D7618 /* PageResponse.swift */; };
+		73D150A428D5B9A2001D7618 /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150A228D5B9A2001D7618 /* PageResponse.swift */; };
+		73D150A628D5B9AE001D7618 /* MoneyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150A528D5B9AE001D7618 /* MoneyResponse.swift */; };
+		73D150A728D5B9AE001D7618 /* MoneyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150A528D5B9AE001D7618 /* MoneyResponse.swift */; };
+		73D150A928D5C575001D7618 /* RawImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150A828D5C575001D7618 /* RawImageResponse.swift */; };
+		73D150AA28D5C575001D7618 /* RawImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150A828D5C575001D7618 /* RawImageResponse.swift */; };
+		73D150AE28DF6FC2001D7618 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150AD28DF6FC2001D7618 /* LoginView.swift */; };
+		73D150AF28DF6FC2001D7618 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150AD28DF6FC2001D7618 /* LoginView.swift */; };
+		73D150B128DF7700001D7618 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150B028DF7700001D7618 /* UserInteractor.swift */; };
+		73D150B228DF7700001D7618 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D150B028DF7700001D7618 /* UserInteractor.swift */; };
 		73FBADB2288C08E900200490 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB1288C08E900200490 /* DIContainer.swift */; };
 		73FBADB3288C08E900200490 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB1288C08E900200490 /* DIContainer.swift */; };
 		73FBADB5288C092300200490 /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBADB4288C092300200490 /* InteractorsContainer.swift */; };
@@ -151,9 +163,11 @@
 		734576B8289FD3F100828D52 /* CategoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInteractor.swift; sourceTree = "<group>"; };
 		734576BB289FFBA200828D52 /* OfferDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetails.swift; sourceTree = "<group>"; };
 		734B9BED2899A8B300684C2F /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		734B9BF02899A98B00684C2F /* NavigatorExtenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorExtenstions.swift; sourceTree = "<group>"; };
+		734B9BF02899A98B00684C2F /* NavigatorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorExtensions.swift; sourceTree = "<group>"; };
 		734B9BF32899AC7000684C2F /* RecommendedOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedOffers.swift; sourceTree = "<group>"; };
 		734B9BF62899AC8000684C2F /* RecommendedOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedOffer.swift; sourceTree = "<group>"; };
+		734D578D297F0831003EA2C9 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		738FEC76297D58F200D870D7 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7390E22528A0072800348E35 /* DetailedOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedOffer.swift; sourceTree = "<group>"; };
 		7390E22828A00B6F00348E35 /* StarsCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsCounter.swift; sourceTree = "<group>"; };
 		739B2DBD288AB05F00EB6453 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
@@ -176,6 +190,12 @@
 		73D0772228D4A13400227845 /* OfferRecommendationClientApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRecommendationClientApi.swift; sourceTree = "<group>"; };
 		73D0772A28D4D0CA00227845 /* OfferRecommendationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRecommendationClient.swift; sourceTree = "<group>"; };
 		73D0772D28D4D0F700227845 /* OfferRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRecommendation.swift; sourceTree = "<group>"; };
+		73D150A228D5B9A2001D7618 /* PageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageResponse.swift; sourceTree = "<group>"; };
+		73D150A528D5B9AE001D7618 /* MoneyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyResponse.swift; sourceTree = "<group>"; };
+		73D150A828D5C575001D7618 /* RawImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawImageResponse.swift; sourceTree = "<group>"; };
+		73D150AB28DC5710001D7618 /* Exbook--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Exbook--iOS--Info.plist"; sourceTree = "<group>"; };
+		73D150AD28DF6FC2001D7618 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		73D150B028DF7700001D7618 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		73FBADB1288C08E900200490 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		73FBADB4288C092300200490 /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
 		73FBADB7288C47E200200490 /* ImagesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesInteractor.swift; sourceTree = "<group>"; };
@@ -215,6 +235,7 @@
 		73225E6F2885CDB50013078D = {
 			isa = PBXGroup;
 			children = (
+				73D150AB28DC5710001D7618 /* Exbook--iOS--Info.plist */,
 				73225E742885CDB60013078D /* Shared */,
 				73225E832885CDB90013078D /* macOS */,
 				73225E7D2885CDB90013078D /* Products */,
@@ -233,6 +254,7 @@
 				73225E752885CDB60013078D /* ExbookApp.swift */,
 				73225E762885CDB60013078D /* ContentView.swift */,
 				73225E772885CDB90013078D /* Assets.xcassets */,
+				738FEC76297D58F200D870D7 /* MyPlayground.playground */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -283,6 +305,7 @@
 		73225E982885D70C0013078D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73D150AC28DF6FB4001D7618 /* Login */,
 				73FBADDB288D75FF00200490 /* Offer */,
 				73CB081C28886A4700058217 /* Base */,
 				73225EA52885DB860013078D /* Basket */,
@@ -356,6 +379,7 @@
 			children = (
 				739B2DC6288AB44D00EB6453 /* User.swift */,
 				73D0771828D49DBC00227845 /* UserClient.swift */,
+				73D150B028DF7700001D7618 /* UserInteractor.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -419,6 +443,7 @@
 		73D0772128D4A10300227845 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				73D150A128D5B991001D7618 /* Common */,
 				73D0771B28D4A0F200227845 /* OfferClientApi.swift */,
 				73D0771E28D4A0FE00227845 /* UserClientApi.swift */,
 				73D0772228D4A13400227845 /* OfferRecommendationClientApi.swift */,
@@ -433,6 +458,25 @@
 				73D0772D28D4D0F700227845 /* OfferRecommendation.swift */,
 			);
 			path = Recommendation;
+			sourceTree = "<group>";
+		};
+		73D150A128D5B991001D7618 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				73D150A228D5B9A2001D7618 /* PageResponse.swift */,
+				73D150A528D5B9AE001D7618 /* MoneyResponse.swift */,
+				73D150A828D5C575001D7618 /* RawImageResponse.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		73D150AC28DF6FB4001D7618 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				73D150AD28DF6FC2001D7618 /* LoginView.swift */,
+				734D578D297F0831003EA2C9 /* LoginViewViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		73FBADB0288C08D000200490 /* DependencyInjection */ = {
@@ -470,7 +514,7 @@
 				73FBADC8288C4C0500200490 /* APICall.swift */,
 				73FBADCB288C796800200490 /* NetworkingHelpers.swift */,
 				73FBADD8288D5B1800200490 /* Loadable.swift */,
-				734B9BF02899A98B00684C2F /* NavigatorExtenstions.swift */,
+				734B9BF02899A98B00684C2F /* NavigatorExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -597,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73225EA32885DABD0013078D /* AccountView.swift in Sources */,
+				73D150A928D5C575001D7618 /* RawImageResponse.swift in Sources */,
 				731D9E3528B25C2000C847D6 /* OfferDescription.swift in Sources */,
 				734B9BEE2899A8B300684C2F /* Path.swift in Sources */,
 				734576B0289E9C2400828D52 /* PriceSnippet.swift in Sources */,
@@ -613,12 +658,13 @@
 				7390E22928A00B6F00348E35 /* StarsCounter.swift in Sources */,
 				73CB08252888814500058217 /* Spacing.swift in Sources */,
 				739B2DC7288AB44D00EB6453 /* User.swift in Sources */,
-				734B9BF12899A98B00684C2F /* NavigatorExtenstions.swift in Sources */,
+				734B9BF12899A98B00684C2F /* NavigatorExtensions.swift in Sources */,
 				73FBADB5288C092300200490 /* InteractorsContainer.swift in Sources */,
 				734B9BF72899AC8000684C2F /* RecommendedOffer.swift in Sources */,
 				73FBADB8288C47E200200490 /* ImagesInteractor.swift in Sources */,
 				739B2DCF288ABC6E00EB6453 /* Category.swift in Sources */,
 				73D0771128D45BD200227845 /* ShakeGestureExtension.swift in Sources */,
+				73D150A328D5B9A2001D7618 /* PageResponse.swift in Sources */,
 				73225E962885D5CF0013078D /* AppState.swift in Sources */,
 				73225EA02885DA940013078D /* ListingView.swift in Sources */,
 				731D9E3228B2579C00C847D6 /* StandardButton.swift in Sources */,
@@ -627,14 +673,18 @@
 				739B2DD2288ABCD300EB6453 /* OfferInteractor.swift in Sources */,
 				73D0771628D49D5600227845 /* OfferClient.swift in Sources */,
 				73FBADCF288C7B9F00200490 /* AppEnvironment.swift in Sources */,
+				73D150A628D5B9AE001D7618 /* MoneyResponse.swift in Sources */,
+				734D578E297F0831003EA2C9 /* LoginViewViewModel.swift in Sources */,
 				73D0771928D49DBC00227845 /* UserClient.swift in Sources */,
 				734576BC289FFBA200828D52 /* OfferDetails.swift in Sources */,
 				73D0771C28D4A0F200227845 /* OfferClientApi.swift in Sources */,
+				73D150B128DF7700001D7618 /* UserInteractor.swift in Sources */,
 				73CB0829288881C600058217 /* Color.swift in Sources */,
 				73D0771328D49CFA00227845 /* DataProvidersContainer.swift in Sources */,
 				73FBADC0288C492E00200490 /* ImageProvider.swift in Sources */,
 				734B9BF42899AC7000684C2F /* RecommendedOffers.swift in Sources */,
 				734576B3289EBB8200828D52 /* LoadableImage.swift in Sources */,
+				73D150AE28DF6FC2001D7618 /* LoginView.swift in Sources */,
 				73FBADDD288D760C00200490 /* OfferView.swift in Sources */,
 				73225E9D2885D8510013078D /* HomeView.swift in Sources */,
 				739B2DCB288AB4C900EB6453 /* ShippingMethod.swift in Sources */,
@@ -670,14 +720,19 @@
 				73CB082D288882BC00058217 /* StandardUI.swift in Sources */,
 				731D9E3C28B25C6100C847D6 /* OfferDeliveryOptions.swift in Sources */,
 				734576AE289E9B3C00828D52 /* OfferTypeBadges.swift in Sources */,
+				73D150B228DF7700001D7618 /* UserInteractor.swift in Sources */,
 				734576BA289FD3F100828D52 /* CategoryInteractor.swift in Sources */,
 				734576B7289FD28400828D52 /* CategoryList.swift in Sources */,
 				73D0771428D49CFA00227845 /* DataProvidersContainer.swift in Sources */,
 				73FBADD3288D50CA00200490 /* ListingOfferRow.swift in Sources */,
 				7390E22A28A00B6F00348E35 /* StarsCounter.swift in Sources */,
+				73D150AA28D5C575001D7618 /* RawImageResponse.swift in Sources */,
 				73CB08262888814500058217 /* Spacing.swift in Sources */,
+				73D150A428D5B9A2001D7618 /* PageResponse.swift in Sources */,
+				734D578F297F0831003EA2C9 /* LoginViewViewModel.swift in Sources */,
+				73D150AF28DF6FC2001D7618 /* LoginView.swift in Sources */,
 				739B2DC8288AB44D00EB6453 /* User.swift in Sources */,
-				734B9BF22899A98B00684C2F /* NavigatorExtenstions.swift in Sources */,
+				734B9BF22899A98B00684C2F /* NavigatorExtensions.swift in Sources */,
 				73D0771D28D4A0F200227845 /* OfferClientApi.swift in Sources */,
 				73FBADB6288C092300200490 /* InteractorsContainer.swift in Sources */,
 				734B9BF82899AC8000684C2F /* RecommendedOffer.swift in Sources */,
@@ -690,6 +745,7 @@
 				739B2DC4288AB24F00EB6453 /* Money.swift in Sources */,
 				739B2DD3288ABCD300EB6453 /* OfferInteractor.swift in Sources */,
 				73FBADD0288C7B9F00200490 /* AppEnvironment.swift in Sources */,
+				73D150A728D5B9AE001D7618 /* MoneyResponse.swift in Sources */,
 				734576BD289FFBA200828D52 /* OfferDetails.swift in Sources */,
 				73CB082A288881C600058217 /* Color.swift in Sources */,
 				73FBADC1288C492E00200490 /* ImageProvider.swift in Sources */,
@@ -845,13 +901,14 @@
 				DEVELOPMENT_TEAM = 362M7DLB2G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Exbook--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -876,13 +933,14 @@
 				DEVELOPMENT_TEAM = 362M7DLB2G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Exbook--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -916,7 +974,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.exbook.Exbook;
 				PRODUCT_NAME = Exbook;
@@ -944,7 +1002,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.exbook.Exbook;
 				PRODUCT_NAME = Exbook;

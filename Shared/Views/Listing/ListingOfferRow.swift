@@ -12,7 +12,6 @@ struct ListingOfferRow: View {
     
     init(offer: DetailedOffer) {
         self.offer = offer
-        print("Initialied offer \(offer.id.raw)")
     }
     
     var body: some View {

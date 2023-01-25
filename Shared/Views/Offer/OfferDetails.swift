@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
+import SwiftUIRouter
 
 struct OfferDetails: View {
     let offer: DetailedOffer
+    @EnvironmentObject var navigator: Navigator
     
     @State private var quantity: String = "1"
         
     var body: some View {
         VStack(alignment: .leading) {
             offerTitleBar()
+                .onTapGesture {
+                    navigator.navigate(.home)
+                }
             Divider()
             imageCarousel()
             offerDescription()
@@ -48,7 +53,7 @@ struct OfferDetails: View {
             Text(offer.book.title)
                 .font(.title3)
             HStack {
-                Text("Od: \(offer.seller.id.raw)")
+                Text("Od: \(offer.seller.username)")
                     .font(.footnote)
                 StarsCounter(stars: offer.seller.grade)
             }

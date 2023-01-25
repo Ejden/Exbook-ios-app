@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import OSLog
 
 class OfferReccomendationClientApi : OfferRecommendationClient {
+    private static let logger = Logger()
     private let urlSession: URLSession
     private let baseUrl: String
     
@@ -25,7 +27,8 @@ class OfferReccomendationClientApi : OfferRecommendationClient {
             let (data, _) = try await URLSession.shared.data(from: url)
             let parsedData = try JSONDecoder().decode(OfferRecommendationResponse.self, from: data)
             return .loaded(parsedData.recommendations.map { $0.toDomain() })
-        } catch {
+        } catch let error {
+            print(error)
             return .failed(error)
         }
     }
@@ -42,7 +45,7 @@ extension OfferRecommendationResponse {
         let images: OfferRecommendationResponse.Images
         let type: String
         let seller: OfferRecommendationResponse.Seller
-        let price: OfferRecommendationResponse.Money
+        let price: MoneyResponse?
     }
 }
 
@@ -51,7 +54,6 @@ extension OfferRecommendationResponse {
         let author: String
         let title: String
         let isbn: String?
-        let price: OfferRecommendationResponse.Money
         let condition: String
     }
 }
@@ -79,13 +81,6 @@ extension OfferRecommendationResponse {
     }
 }
 
-extension OfferRecommendationResponse {
-    struct Money: Decodable {
-        let amount: Decimal
-        let currency: String
-    }
-}
-
 extension OfferRecommendationResponse.OfferRecommendation {
     func toDomain() -> OfferRecommendation {
         return OfferRecommendation(
@@ -110,10 +105,7 @@ extension OfferRecommendationResponse.OfferRecommendation {
                 lastName: seller.lastName,
                 grade: seller.grade
             ),
-            price: Money(
-                amount: price.amount,
-                currency: Currency(rawValue: price.currency)!
-            )
+            price: price?.toDomain()
         )
     }
 }

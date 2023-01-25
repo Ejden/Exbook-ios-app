@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListingSearchBar: View {
     @Binding var searchingPhrase: String
+    let onSubmitAction: (QueryParams) -> Void
     @State private var providedText: String = ""
     @State private var filterSheetVisible: Bool = false
     
@@ -29,6 +30,7 @@ struct ListingSearchBar: View {
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .onSubmit {
             searchingPhrase = providedText
+            onSubmitAction(QueryParams(searchingPhrase: providedText))
         }
     }
     
@@ -42,10 +44,16 @@ struct ListingSearchBar: View {
     }
 }
 
+extension ListingSearchBar {
+    struct QueryParams {
+        let searchingPhrase: String
+    }
+}
+
 struct ListingSearchBar_Previews: PreviewProvider {
     @State private static var text: String = ""
     
     static var previews: some View {
-        ListingSearchBar(searchingPhrase: $text)
+        ListingSearchBar(searchingPhrase: $text) { _ in }
     }
 }

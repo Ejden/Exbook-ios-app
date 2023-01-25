@@ -12,15 +12,18 @@ extension DIContainer {
         let imageProvider: ImageProvider
         let offerClient: OfferClient
         let offerRecommendationClient: OfferRecommendationClient
+        let userClient: UserClient
         
         init(
             imageProvider: ImageProvider,
             offerClient: OfferClient,
-            offerRecommendationClient: OfferRecommendationClient
+            offerRecommendationClient: OfferRecommendationClient,
+            userClient: UserClient
         ) {
             self.imageProvider = imageProvider
             self.offerClient = offerClient
             self.offerRecommendationClient = offerRecommendationClient
+            self.userClient = userClient
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 protocol OfferInteractor {
     func fetchOffer(id: OfferId) async -> Loadable<DetailedOffer>
-    func fetchOffers(page: Int) async -> Array<DetailedOffer>
+    func fetchOffers(searchingPhrase: String, page: Int) async -> Array<DetailedOffer>
     func fetchRecommendations() async -> Loadable<Array<OfferRecommendation>>
 }
 
@@ -27,8 +27,8 @@ class RealOfferInteractor: OfferInteractor {
         return await offerClient.fetchOffer(id: id)
     }
     
-    func fetchOffers(page: Int) async -> Array<DetailedOffer> {
-        return await offerClient.fetchOffers(page: page)
+    func fetchOffers(searchingPhrase: String, page: Int) async -> Array<DetailedOffer> {
+        return await offerClient.fetchOffers(searchingPhrase: searchingPhrase, page: page)
     }
     
     func fetchRecommendations() async -> Loadable<Array<OfferRecommendation>> {
@@ -41,7 +41,7 @@ public class MockOfferInteractor: OfferInteractor {
         return .loaded(Self.sampleDetailsOffer)
     }
     
-    func fetchOffers(page: Int) async -> Array<DetailedOffer> {
+    func fetchOffers(searchingPhrase: String, page: Int) async -> Array<DetailedOffer> {
         return [Self.sampleDetailsOffer, Self.sampleDetailsOffer]
     }
     
